@@ -36,7 +36,7 @@ function App() {
           <Route path="/about" exact component={About}></Route>
           <Route path="/policy" exact component={Policy}></Route>
           <Route path="/contact" exact component={Contact}></Route>
-          <Route path="/qna" exact component={QnA}></Route>
+          <Route path="/faq" exact component={QnA}></Route>
           <Route render={() => <NotFound />}></Route>
         </Switch>
         <Footer />

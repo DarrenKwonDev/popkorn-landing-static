@@ -9,29 +9,17 @@ import { DownOutlined } from "@ant-design/icons";
 const menu = (
   <Menu>
     <Menu.Item>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="http://www.alipay.com/"
-      >
-        1st menu item
-      </a>
+      <a href="http://www.alipay.com/">Eng</a>
     </Menu.Item>
     <Menu.Item>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="http://www.taobao.com/"
-      >
-        2nd menu item
-      </a>
+      <a href="http://www.taobao.com/">Tiếng Việt</a>
     </Menu.Item>
     <Menu.Item>
-      <a target="_blank" rel="noopener noreferrer" href="http://www.tmall.com/">
-        3rd menu item
-      </a>
+      <a href="http://www.tmall.com/">한국어</a>
     </Menu.Item>
-    <Menu.Item danger>a danger item</Menu.Item>
+    <Menu.Item>
+      <a href="http://www.tmall.com/">日本語</a>
+    </Menu.Item>
   </Menu>
 );
 
@@ -74,8 +62,8 @@ function Header() {
         <Link to="/contact" className="item">
           Contact
         </Link>
-        <Link to="/qna" className="item">
-          QnA
+        <Link to="/faq" className="item">
+          FAQ
         </Link>
         <Link to="/about" className="item">
           About Us
