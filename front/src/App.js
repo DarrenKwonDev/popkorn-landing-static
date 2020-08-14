@@ -2,19 +2,35 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import GlobalStyle from "./GlobalStyle";
 import loadable from "@loadable/component";
+import Loader from "./Components/Loader";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 
-const Home = loadable(() => import("./Screens/Home"));
-const About = loadable(() => import("./Screens/About"));
-const Policy = loadable(() => import("./Screens/Policy"));
-const Contact = loadable(() => import("./Screens/Contact"));
-const QnA = loadable(() => import("./Screens/QnA"));
-const NotFound = loadable(() => import("./Screens/404"));
+const Home = loadable(() => import("./Screens/Home"), {
+  fallback: <Loader />,
+});
+const About = loadable(() => import("./Screens/About"), {
+  fallback: <Loader />,
+});
+const Policy = loadable(() => import("./Screens/Policy"), {
+  fallback: <Loader />,
+});
+const Contact = loadable(() => import("./Screens/Contact"), {
+  fallback: <Loader />,
+});
+const QnA = loadable(() => import("./Screens/QnA"), {
+  fallback: <Loader />,
+});
+const NotFound = loadable(() => import("./Screens/404"), {
+  fallback: <Loader />,
+});
 
 function App() {
   return (
     <>
       <GlobalStyle />
       <Router>
+        <Header />
         <Switch>
           <Route path="/" exact component={Home}></Route>
           <Route path="/about" exact component={About}></Route>
@@ -23,6 +39,7 @@ function App() {
           <Route path="/qna" exact component={QnA}></Route>
           <Route render={() => <NotFound />}></Route>
         </Switch>
+        <Footer />
       </Router>
     </>
   );
