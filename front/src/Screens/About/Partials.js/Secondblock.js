@@ -17,6 +17,12 @@ const Warapper = styled.div`
     font-size: 1.3em;
     font-weight: 500;
     line-height: 2;
+
+    @media all and (max-width: 1023px) {
+      font-size: 1em;
+      font-weight: 500;
+      line-height: 1.5;
+    }
   }
 `;
 

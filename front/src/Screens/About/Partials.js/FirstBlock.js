@@ -5,7 +5,7 @@ function FirstBlock() {
   return (
     <FirstBlockStyled>
       <div className="imageWrapper">
-        {/* <img src={"about.png"} className="mainImg"></img> */}
+        <img src={"about.png"} className="mainImg"></img>
       </div>
     </FirstBlockStyled>
   );

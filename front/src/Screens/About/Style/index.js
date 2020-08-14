@@ -8,6 +8,14 @@ export const FirstBlockStyled = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
+
+    .mainImg {
+      width: 850px;
+
+      @media all and (max-width: 1023px) {
+        width: 280px;
+      }
+    }
   }
 `;
 

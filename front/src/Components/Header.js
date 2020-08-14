@@ -34,6 +34,12 @@ const HeadWrapper = styled.div`
   .left-pane {
     display: flex;
     justify-self: start;
+
+    .logoImage {
+      @media all and (max-width: 1023px) {
+        width: calc(100vw / 5);
+      }
+    }
   }
 
   .right-pane {
@@ -67,7 +73,7 @@ function Header() {
       <HeadWrapper>
         <div className="left-pane">
           <Link to="/">
-            <img src={logo}></img>
+            <img src={logo} className="logoImage"></img>
           </Link>
         </div>
         <div className="right-pane">
@@ -95,9 +101,9 @@ function Header() {
         <div className="hamberger">
           <i
             className="fas fa-bars"
-            onClick={useCallback(() => {
+            onClick={() => {
               setvisible(true);
-            }, [])}
+            }}
           ></i>
         </div>
       </HeadWrapper>
@@ -106,8 +112,12 @@ function Header() {
         title="Basic Drawer"
         placement="right"
         closable={false}
-        onClose={useCallback(() => setvisible(false), [])}
+        onClose={() => {
+          console.log("what");
+          setvisible(false);
+        }}
         visible={visible}
+        forceRender={true}
       >
         <div>
           <Link to="/" className="item">

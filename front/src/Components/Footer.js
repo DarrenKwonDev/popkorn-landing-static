@@ -11,6 +11,9 @@ const FooterWrapper = styled.div`
 
   width: 100%;
   padding: 2em 5em;
+  @media all and (max-width: 1023px) {
+    padding: 2em;
+  }
 
   line-height: 1.5;
 
@@ -25,7 +28,7 @@ const FooterWrapper = styled.div`
     .socialTab,
     .serviceTab {
       justify-self: start;
-      align-self: center;
+      align-self: start;
     }
   }
 
@@ -38,12 +41,19 @@ const FooterWrapper = styled.div`
 
   .infoTab {
     justify-self: start;
-    grid-column: 1/ 3;
+    @media all and (max-width: 1023px) {
+      grid-column: 1/ 3;
+      .logoImage {
+        width: 100px;
+      }
+    }
   }
 
   .socialTab {
     justify-self: start;
-    grid-column: 1/ 3;
+    @media all and (max-width: 1023px) {
+      grid-column: 1/ 3;
+    }
   }
 
   .infoTab,
@@ -63,7 +73,7 @@ function Footer() {
   return (
     <FooterWrapper>
       <div className="infoTab">
-        <img src={logo}></img>
+        <img src={logo} className="logoImage"></img>
         <div>
           <div>Edupopkorn, 750, Gukhoe-daero</div>
           <div>Yeongdeungpo-gu, Seoul, Republic of Korea</div>

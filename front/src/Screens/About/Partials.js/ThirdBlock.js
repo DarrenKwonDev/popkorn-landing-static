@@ -17,7 +17,7 @@ const Warapper = styled.div`
   margin: 3em 0;
 
   @media all and (max-width: 1023px) {
-    padding: 2em 5em;
+    padding: 2em 2em;
   }
 
   .desc {
@@ -35,10 +35,15 @@ const Warapper = styled.div`
 
     @media all and (max-width: 1023px) {
       grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
     }
 
     .introducing {
       justify-self: start;
+      align-self: center;
+      @media all and (max-width: 1023px) {
+        justify-self: center;
+      }
     }
   }
 `;
@@ -48,11 +53,7 @@ function ThirdBlock() {
     <Warapper>
       <Title>Meet The Team</Title>
       <div className="gridWrapper">
-        <Card
-          hoverable
-          style={{ width: 270 }}
-          cover={<img alt="example" src={"jb.png"} />}
-        >
+        <Card hoverable cover={<img alt="example" src={"jb.png"} />}>
           <Meta title="Joonbeom Cho" description="Co-Founder" />
         </Card>
         <div className="introducing">
@@ -71,11 +72,7 @@ function ThirdBlock() {
             <li>Pittsburgh Korean Language and culture operator</li>
           </ul>
         </div>
-        <Card
-          hoverable
-          style={{ width: 270 }}
-          cover={<img alt="example" src={"sh.png"} />}
-        >
+        <Card hoverable cover={<img alt="example" src={"sh.png"} />}>
           <Meta title="Suhun Kwon" description="Co-Founder" />
         </Card>
         <div className="introducing">

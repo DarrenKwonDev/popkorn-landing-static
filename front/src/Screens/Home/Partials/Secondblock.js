@@ -4,7 +4,9 @@ import { SecondblockStyle } from "../Style";
 function Secondblock() {
   return (
     <SecondblockStyle className="second-block">
-      <div className="left-pane">{/* <img src={"phone.png"}></img> */}</div>
+      <div className="left-pane">
+        <img src={"phone.png"} className="phone"></img>
+      </div>
       <div className="right-pane">
         <div className="title">We want the world to enjoy learning. </div>
         <div>
