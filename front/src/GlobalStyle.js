@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
         color: inherit;
     }
     body {
-        font-family: 'Segoe UI', Roboto;
+        font-family: 'Lato', sans-serif;
         margin: 0;
         padding: 0;
     }

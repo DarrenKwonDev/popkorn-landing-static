@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import logo from "../assets/logo.svg";
-import logotext from "../assets/logotext.svg";
 
 const FooterWrapper = styled.div`
   position: absolute;
   /* bottom: 0; */
 
   width: 100%;
+  height: 300px;
   padding: 2em 5em;
 
   display: grid;
@@ -19,6 +19,7 @@ const FooterWrapper = styled.div`
     justify-self: start;
   }
 
+  .infoTab,
   .termTab,
   .socialTab,
   .serviceTab {
@@ -30,7 +31,6 @@ function Footer() {
     <FooterWrapper>
       <div className="infoTab">
         <img src={logo}></img>
-        <img src={logotext}></img>
         <div>
           <div>Edupopkorn, 750, Gukhoe-daero</div>
           <div>Yeongdeungpo-gu, Seoul, Republic of Korea</div>

@@ -1,7 +1,12 @@
 import React from "react";
+import FirstBlock from "./Partials.js/FirstBlock";
 
 function About() {
-  return <div>about</div>;
+  return (
+    <>
+      <FirstBlock />
+    </>
+  );
 }
 
 export default About;

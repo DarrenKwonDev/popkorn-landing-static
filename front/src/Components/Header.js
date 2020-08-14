@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../assets/logo.svg";
-import logotext from "../assets/logotext.svg";
 import { Menu, Dropdown } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
@@ -52,7 +51,6 @@ function Header() {
       <div className="left-pane">
         <Link to="/">
           <img src={logo}></img>
-          <img src={logotext}></img>
         </Link>
       </div>
       <div className="right-pane">
