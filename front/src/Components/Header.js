@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../assets/logo.svg";
 import { Menu, Dropdown } from "antd";
 import { DownOutlined } from "@ant-design/icons";
+import { Drawer } from "antd";
 
 const menu = (
   <Menu>
@@ -43,36 +44,93 @@ const HeadWrapper = styled.div`
       margin-left: 3em;
     }
   }
+  .hamberger {
+    display: none;
+  }
+
+  @media all and (max-width: 1023px) {
+    .right-pane {
+      display: none;
+    }
+    .hamberger {
+      display: block;
+      justify-self: end;
+    }
+  }
 `;
 
 function Header() {
+  const [visible, setvisible] = useState(false);
+
   return (
-    <HeadWrapper>
-      <div className="left-pane">
-        <Link to="/">
-          <img src={logo}></img>
-        </Link>
-      </div>
-      <div className="right-pane">
-        <Link to="/" className="item">
-          Home
-        </Link>
-        <Link to="/contact" className="item">
-          Contact
-        </Link>
-        <Link to="/faq" className="item">
-          FAQ
-        </Link>
-        <Link to="/about" className="item">
-          About Us
-        </Link>
-        <Dropdown overlay={menu} className="item">
-          <a className="ant-dropdown-link" onClick={(e) => e.preventDefault()}>
-            Language <DownOutlined />
-          </a>
-        </Dropdown>
-      </div>
-    </HeadWrapper>
+    <>
+      <HeadWrapper>
+        <div className="left-pane">
+          <Link to="/">
+            <img src={logo}></img>
+          </Link>
+        </div>
+        <div className="right-pane">
+          <Link to="/" className="item">
+            Home
+          </Link>
+          <Link to="/contact" className="item">
+            Contact
+          </Link>
+          <Link to="/faq" className="item">
+            FAQ
+          </Link>
+          <Link to="/about" className="item">
+            About Us
+          </Link>
+          <Dropdown overlay={menu} className="item">
+            <a
+              className="ant-dropdown-link"
+              onClick={(e) => e.preventDefault()}
+            >
+              Language <DownOutlined />
+            </a>
+          </Dropdown>
+        </div>
+        <div className="hamberger">
+          <i
+            className="fas fa-bars"
+            onClick={useCallback(() => {
+              setvisible(true);
+            }, [])}
+          ></i>
+        </div>
+      </HeadWrapper>
+      {/* drawer */}
+      <Drawer
+        title="Basic Drawer"
+        placement="right"
+        closable={false}
+        onClose={useCallback(() => setvisible(false), [])}
+        visible={visible}
+      >
+        <div>
+          <Link to="/" className="item">
+            Home
+          </Link>
+        </div>
+        <div>
+          <Link to="/contact" className="item">
+            Contact
+          </Link>
+        </div>
+        <div>
+          <Link to="/faq" className="item">
+            FAQ
+          </Link>
+        </div>
+        <div>
+          <Link to="/about" className="item">
+            About Us
+          </Link>
+        </div>
+      </Drawer>
+    </>
   );
 }
 

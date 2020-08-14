@@ -44,6 +44,9 @@ export const FirstBlockStyled = styled.div`
 export const SecondblockStyle = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  @media all and (max-width: 1023px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
   align-items: center;
   justify-items: center;
   background-color: #fffbfc;
@@ -66,6 +69,9 @@ export const SecondblockStyle = styled.div`
 export const ThirdblockStyle = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  @media all and (max-width: 1023px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
   align-items: center;
   justify-items: center;
   background-color: #fffbfc;

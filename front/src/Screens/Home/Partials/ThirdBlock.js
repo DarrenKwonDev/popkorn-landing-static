@@ -6,14 +6,14 @@ function ThirdBlock() {
     <>
       <ThirdblockStyle className="left-pane">
         <div className="left-pane">
-          <iframe
+          {/* <iframe
             src="https://player.vimeo.com/video/445441375"
             width="640"
             height="360"
-            frameborder="0"
+            frameBorder="0"
             allow="autoplay; fullscreen"
-            allowfullscreen
-          ></iframe>
+            allowFullScreen
+          ></iframe> */}
         </div>
         <div className="right-pane">
           <div className="title">
