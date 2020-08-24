@@ -15,9 +15,6 @@ const About = loadable(() => import("./Screens/About"), {
 const Policy = loadable(() => import("./Screens/Policy"), {
   fallback: <Loader />,
 });
-const Contact = loadable(() => import("./Screens/Contact"), {
-  fallback: <Loader />,
-});
 const QnA = loadable(() => import("./Screens/QnA"), {
   fallback: <Loader />,
 });
@@ -35,7 +32,6 @@ function App() {
           <Route path="/" exact component={Home}></Route>
           <Route path="/about" exact component={About}></Route>
           <Route path="/policy" exact component={Policy}></Route>
-          <Route path="/contact" exact component={Contact}></Route>
           <Route path="/faq" exact component={QnA}></Route>
           <Route render={() => <NotFound />}></Route>
         </Switch>

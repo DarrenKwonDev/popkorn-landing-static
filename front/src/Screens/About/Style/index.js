@@ -17,6 +17,16 @@ export const FirstBlockStyled = styled.div`
       }
     }
   }
+
+  .catchphrase {
+    position: absolute;
+    font-size: 2.5rem;
+    left: 10%;
+    top: 30%;
+    @media all and (max-width: 1023px) {
+      font-size: 1rem;
+    }
+  }
 `;
 
 export const Title = styled.div`
@@ -24,4 +34,8 @@ export const Title = styled.div`
   font-weight: bold;
   text-align: center;
   margin-bottom: 3em;
+  width: 100%;
+  @media all and (max-width: 1023px) {
+    font-size: 1.25em;
+  }
 `;

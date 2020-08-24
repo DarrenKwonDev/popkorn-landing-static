@@ -29,7 +29,7 @@ function ThirdBlock() {
   return (
     <>
       <ThirdblockStyle>
-        <div className="left-pane">
+        <div className="videoWrapper">
           {isMobile ? (
             <iframe
               src="https://player.vimeo.com/video/445441375"
@@ -52,15 +52,11 @@ function ThirdBlock() {
             ></iframe>
           )}
         </div>
-        <div className="right-pane">
+        <div className="textWrapper">
           <div className="title">
-            Here's how PopKorn makes learning <br /> fast and interesting
+            Here's how PopKorn makes <br /> learning fast and interesting
           </div>
-          <div>
-            <div className="desc">
-              Find opportunities and catch your dreams with PopKorrn
-            </div>
-          </div>
+          <div className="desc">lorem ipsum dolor sit amet</div>
         </div>
       </ThirdblockStyle>
     </>

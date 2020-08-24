@@ -11,6 +11,8 @@ const FooterWrapper = styled.div`
 
   width: 100%;
   padding: 2em 5em;
+  color: #6b7684;
+
   @media all and (max-width: 1023px) {
     padding: 2em;
   }
@@ -21,6 +23,8 @@ const FooterWrapper = styled.div`
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
 
   @media all and (max-width: 1023px) {
+    font-size: 1rem;
+
     grid-template-columns: 1.5fr 1fr;
     grid-template-rows: 1fr 0.5fr 0.5fr;
 
@@ -41,8 +45,11 @@ const FooterWrapper = styled.div`
 
   .infoTab {
     justify-self: start;
+    font-size: 16px;
     @media all and (max-width: 1023px) {
       grid-column: 1/ 3;
+      font-size: 13px;
+
       .logoImage {
         width: 100px;
       }
@@ -60,6 +67,9 @@ const FooterWrapper = styled.div`
   .termTab,
   .socialTab,
   .serviceTab {
+    @media all and (max-width: 1023px) {
+      margin: 16px 0;
+    }
   }
 
   .socialTab {
@@ -74,7 +84,7 @@ function Footer() {
     <FooterWrapper>
       <div className="infoTab">
         <img src={logo} className="logoImage"></img>
-        <div>
+        <div className="companyInfo">
           <div>Edupopkorn, 750, Gukhoe-daero</div>
           <div>Yeongdeungpo-gu, Seoul, Republic of Korea</div>
           <div>Email | edupopkorn@edupopkorn.com</div>
