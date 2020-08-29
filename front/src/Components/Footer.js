@@ -1,13 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import logo from "../assets/logo.svg";
+import logo_red from "../assets/logo_red.svg";
+
 import { Avatar } from "antd";
+import { Link } from "react-router-dom";
 
 const FooterWrapper = styled.div`
   position: absolute;
   /* bottom: 0; */
-  border-top: 2px solid #b2bec3;
   margin-top: 5em;
+  background-color: rgb(234, 234, 234);
 
   width: 100%;
   padding: 2em 5em;
@@ -49,10 +52,6 @@ const FooterWrapper = styled.div`
     @media all and (max-width: 1023px) {
       grid-column: 1/ 3;
       font-size: 13px;
-
-      .logoImage {
-        width: 100px;
-      }
     }
   }
 
@@ -83,7 +82,12 @@ function Footer() {
   return (
     <FooterWrapper>
       <div className="infoTab">
-        <img src={logo} className="logoImage"></img>
+        <img
+          src={logo_red}
+          className="logoImage"
+          alt="logo"
+          style={{ width: "30px" }}
+        ></img>
         <div className="companyInfo">
           <div>Edupopkorn, 750, Gukhoe-daero</div>
           <div>Yeongdeungpo-gu, Seoul, Republic of Korea</div>
@@ -98,9 +102,15 @@ function Footer() {
       <div className="serviceTab">
         <h4>Our service</h4>
         <div>
-          <div>Features</div>
-          <div>Testimonials</div>
-          <div>About Us</div>
+          <div>
+            <a href="/#features">Features</a>
+          </div>
+          <div>
+            <a href="/#testimonials">Testimonials</a>
+          </div>
+          <div>
+            <Link to="about">About Us</Link>
+          </div>
         </div>
       </div>
       <div className="termTab">

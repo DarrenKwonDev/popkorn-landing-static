@@ -6,18 +6,22 @@ import { Title } from "../Style";
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-items: center;
   @media all and (max-width: 1023px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  .desc {
+    margin-bottom: 3em;
   }
 `;
 
 function FourthBlock() {
   return (
     <>
-      <div>
+      <div style={{ padding: "10em 0" }}>
         <Title>Special Mentors</Title>
         <Wrapper>
           <div>
@@ -28,7 +32,7 @@ function FourthBlock() {
                 alignItems: "center",
               }}
             >
-              <Avatar size={156} icon={<UserOutlined />} src={"yale.png"} />
+              <Avatar size={128} icon={<UserOutlined />} src={"yale.png"} />
               <div
                 style={{
                   margin: "1em 0",
@@ -39,7 +43,7 @@ function FourthBlock() {
                 Clint Minseung Yoo
               </div>
             </div>
-            <div style={{ textAlign: "start" }}>
+            <div style={{ textAlign: "start" }} className="desc">
               <ul style={{ listStyle: "disc", lineHeight: "150%" }}>
                 <li>Yale University</li>
                 <li>Greenberg Traurig LLP</li>
@@ -55,7 +59,7 @@ function FourthBlock() {
                 alignItems: "center",
               }}
             >
-              <Avatar size={156} icon={<UserOutlined />} src={"yale.png"} />
+              <Avatar size={128} icon={<UserOutlined />} src={"yale.png"} />
               <div
                 style={{
                   margin: "1em 0",
@@ -66,34 +70,7 @@ function FourthBlock() {
                 Clint Minseung Yoo
               </div>
             </div>
-            <div style={{ textAlign: "start" }}>
-              <ul style={{ listStyle: "disc", lineHeight: "150%" }}>
-                <li>Yale University</li>
-                <li>Greenberg Traurig LLP</li>
-                <li>Korea Men's National Lacrosse Team</li>
-              </ul>
-            </div>
-          </div>
-          <div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-            >
-              <Avatar size={156} icon={<UserOutlined />} src={"yale.png"} />
-              <div
-                style={{
-                  margin: "1em 0",
-                  fontSize: "1.2em",
-                  fontWeight: "600",
-                }}
-              >
-                Clint Minseung Yoo
-              </div>
-            </div>
-            <div style={{ textAlign: "start" }}>
+            <div style={{ textAlign: "start" }} className="desc">
               <ul style={{ listStyle: "disc", lineHeight: "150%" }}>
                 <li>Yale University</li>
                 <li>Greenberg Traurig LLP</li>

@@ -6,9 +6,11 @@ import { Title } from "../Style";
 const Warapper = styled.div`
   background-color: #f9fcff;
   width: 100%;
-  padding: 2em 8em;
+  padding: 10em 8em;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   @media all and (max-width: 1023px) {
     padding: 2em 2em;
@@ -17,14 +19,17 @@ const Warapper = styled.div`
   .gridWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
     justify-items: center;
     align-items: center;
     gap: 8px;
 
+    width: 750px;
+
     @media all and (max-width: 768px) {
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(4, 1fr);
+      width: 300px;
+      /* grid-template-rows: repeat(4, 1fr); */
     }
   }
 `;
@@ -128,30 +133,6 @@ function ThirdBlock() {
                   Seoul National University, <br /> Korean language and
                   literature
                 </li>
-              </ul>
-            </div>
-          </div>
-        </CustomCard>
-        <CustomCard>
-          <img alt="example" src={"yale.png"} />
-          <div className="hoverContents">
-            <div className="text">
-              <div className="name">who</div>
-              <ul>
-                <li>
-                  Yale <br /> Law school
-                </li>
-              </ul>
-            </div>
-          </div>
-        </CustomCard>
-        <CustomCard>
-          <img alt="example" src={"next.jpg"} />
-          <div className="hoverContents">
-            <div className="text">
-              <div className="name">Who will be next?</div>
-              <ul>
-                <li>We Looking for our partner</li>
               </ul>
             </div>
           </div>

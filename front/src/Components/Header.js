@@ -4,22 +4,22 @@ import styled from "styled-components";
 import logo_red from "../assets/logo_red.svg";
 import logo from "../assets/logo.svg";
 import { Menu, Dropdown } from "antd";
-import { DownOutlined, GlobalOutlined } from "@ant-design/icons";
+import { DownOutlined } from "@ant-design/icons";
 import { Drawer } from "antd";
 
 const menu = (
   <Menu>
     <Menu.Item>
-      <a href="http://www.alipay.com/">Eng</a>
+      <div>Eng</div>
     </Menu.Item>
     <Menu.Item>
-      <a href="http://www.taobao.com/">Tiếng Việt</a>
+      <div>Tiếng Việt</div>
     </Menu.Item>
     <Menu.Item>
-      <a href="http://www.tmall.com/">한국어</a>
+      <div>한국어</div>
     </Menu.Item>
     <Menu.Item>
-      <a href="http://www.tmall.com/">日本語</a>
+      <div>日本語</div>
     </Menu.Item>
   </Menu>
 );
@@ -35,6 +35,10 @@ const HeadWrapper = styled.div`
   align-items: center;
   justify-items: center;
   width: 100%;
+
+  @media all and (max-width: 1023px) {
+    background-color: rgb(253, 190, 199);
+  }
 
   grid-template-columns: auto 4fr;
   padding: 1em 2em;
@@ -81,6 +85,16 @@ const DrawerWrapper = styled(Drawer)`
   .drawerItems {
     font-size: 20px;
   }
+
+  .LangButtonWrapper {
+    margin-top: 16px;
+  }
+`;
+
+const LanguageButton = styled.button`
+  border: none;
+  background-color: rgb(226, 228, 231);
+  margin-right: 8px;
 `;
 
 function Header() {
@@ -95,7 +109,7 @@ function Header() {
       <HeadWrapper>
         <div className="left-pane">
           <Link to="/">
-            <img src={logo_red} className="logoImage"></img>
+            <img src={logo_red} className="logoImage" alt="logo"></img>
           </Link>
         </div>
         <div className="right-pane">
@@ -113,6 +127,7 @@ function Header() {
             <a
               className="ant-dropdown-link"
               onClick={(e) => e.preventDefault()}
+              href="/#"
             >
               Language <DownOutlined />
             </a>
@@ -125,18 +140,6 @@ function Header() {
               setvisible(true);
             }}
           ></i>
-          <Dropdown
-            overlay={menu}
-            className="mobileLangButton"
-            trigger={["click"]}
-          >
-            <a
-              className="ant-dropdown-link"
-              onClick={(e) => e.preventDefault()}
-            >
-              <GlobalOutlined style={{ marginLeft: "6px" }} />
-            </a>
-          </Dropdown>
         </div>
       </HeadWrapper>
 
@@ -157,7 +160,12 @@ function Header() {
             }}
           >
             <Link to="/">
-              <img src={logo} className="logoImage" style={drawerImgCss}></img>
+              <img
+                src={logo}
+                className="logoImage"
+                style={drawerImgCss}
+                alt={"drawerLogo"}
+              ></img>
             </Link>
           </div>
         }
@@ -179,6 +187,12 @@ function Header() {
           <Link to="/about" className="drawerItems" onClick={onCloseDrawer}>
             About Us
           </Link>
+        </div>
+        <div className="LangButtonWrapper">
+          <LanguageButton>Kor</LanguageButton>
+          <LanguageButton>Eng</LanguageButton>
+          <LanguageButton>Việt</LanguageButton>
+          <LanguageButton>日本語</LanguageButton>
         </div>
       </DrawerWrapper>
     </WholeWrapper>

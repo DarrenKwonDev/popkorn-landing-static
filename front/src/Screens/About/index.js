@@ -10,7 +10,7 @@ function About() {
       <FirstBlock />
       <Secondblock />
       <ThirdBlock />
-      {/* <FourthBlock /> */}
+      <FourthBlock />
     </>
   );
 }

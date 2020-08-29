@@ -10,21 +10,57 @@ export const FirstBlockStyled = styled.div`
   flex-direction: column;
   align-items: center;
   color: black;
+  width: 100%;
 
-  .title {
-    font-size: 2rem;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 24px;
-    margin-bottom: 12px;
-    line-height: 1.2;
+  overflow: hidden;
+
+  .manImage {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
   }
 
-  .desc {
-    font-size: 1rem;
+  .imageAndTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .headTitleWrapper {
+    position: absolute;
+    z-index: 10;
     text-align: center;
-    line-height: 1.2;
-    padding: 0 4px;
+
+    .title {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 12px;
+      line-height: 1.2;
+
+      @media all and (max-width: 1023px) {
+        text-align: center;
+        font-size: 2rem;
+      }
+      /* ipad에서 폰트가 너무 작에 되어서 max-width를 768에서 1px 뺌 */
+      @media all and (max-width: 767px) {
+        text-align: center;
+        font-size: 1.5rem;
+      }
+    }
+
+    .desc {
+      font-size: 2rem;
+      line-height: 1.2;
+      padding: 0 4px;
+      @media all and (max-width: 1023px) {
+        display: none;
+      }
+    }
   }
 
   .ImageAndButtons {
@@ -40,8 +76,8 @@ export const FirstBlockStyled = styled.div`
 
     .mainImg {
       position: relative;
-      width: 560px;
-      margin-top: 24px;
+      width: 480px;
+      margin-top: 36px;
 
       @media all and (max-width: 1023px) {
         width: 250px;
@@ -49,17 +85,22 @@ export const FirstBlockStyled = styled.div`
     }
 
     .ButtonWrapper {
-      order: -1;
+      order: 1;
+      z-index: 100;
 
       position: absolute;
       display: flex;
       flex-direction: column;
       align-items: center;
 
-      width: 100%;
-      bottom: 0px;
+      width: 80%;
+      bottom: 0;
 
       background-color: white;
+
+      @media all and (max-width: 1023px) {
+        width: 100%;
+      }
     }
   }
 `;
@@ -135,7 +176,7 @@ export const ThirdblockStyle = styled.div`
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-items: center;
-  background-color: #fffbfc;
+  padding: 5em 0;
 
   @media all and (max-width: 1023px) {
     grid-template-columns: repeat(1, 1fr);
@@ -144,6 +185,8 @@ export const ThirdblockStyle = styled.div`
 
   .videoWrapper {
     .video {
+      justify-self: flex-end;
+
       @media all and (max-width: 1023px) {
         order: 2;
       }
@@ -151,26 +194,36 @@ export const ThirdblockStyle = styled.div`
   }
 
   .textWrapper {
-    justify-self: start;
+    /* justify-self: start; */
+    justify-self: center;
+    margin-left: 32px;
 
     @media all and (max-width: 1023px) {
       justify-self: center;
       text-align: center;
       margin-top: 2em;
+      margin-left: 0;
       order: -1;
     }
 
     .title {
-      font-size: 2em;
+      font-size: 40px;
+      line-height: 1.5;
       font-weight: bold;
-      margin-bottom: 3em;
+      margin-bottom: 15px;
       @media all and (max-width: 1023px) {
-        font-size: 1.8em;
-        margin-bottom: 1em;
+        font-size: 32px;
+        margin-bottom: 2em;
       }
     }
 
     .desc {
+      font-size: 24px;
+      line-height: 1.5;
+      @media all and (max-width: 1023px) {
+        font-size: 1.5em;
+        margin-bottom: 2em;
+      }
     }
   }
 `;

@@ -5,7 +5,7 @@ import { Title } from "../Style";
 const Warapper = styled.div`
   background-color: #fffef9;
   width: 100%;
-  padding: 2em 4em;
+  padding: 10em 4em;
   display: flex;
   flex-direction: column;
 
@@ -14,13 +14,12 @@ const Warapper = styled.div`
   }
 
   .desc {
-    font-size: 1.3em;
+    font-size: 24px;
     font-weight: 500;
     line-height: 2;
     text-align: center;
 
     @media all and (max-width: 1023px) {
-      font-size: 1em;
       font-weight: 500;
       line-height: 1.5;
     }
@@ -37,9 +36,9 @@ function Secondblock() {
           combines short clips and videos to education.
           <br />
           <br />
-          Advocating and fascinated by the global K-pop enthusiasm, we were
-          obliged to build the PopKorn platform that can help world wide fans to
-          enjoy Korean video contents by heart.
+          Advocating and fascinated by the global K-pop enthusiasm, <br /> we
+          were obliged to build the PopKorn platform that can help world wide
+          fans to enjoy Korean video contents by heart.
         </div>
       </div>
     </Warapper>

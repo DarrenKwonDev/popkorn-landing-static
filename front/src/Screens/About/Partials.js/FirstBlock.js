@@ -5,18 +5,11 @@ function FirstBlock() {
   return (
     <FirstBlockStyled>
       <div className="imageWrapper">
-        <img src={"about.png"} className="mainImg"></img>
-      </div>
-      <div className="catchphrase ">
-        <mark
-          style={{
-            backgroundColor: "rgba(255,255,255,0.5)",
-            lineHeight: "1.5",
-          }}
-        >
+        <img src={"about.png"} className="mainImg" alt="about"></img>
+        <div className="catchphrase">
           EduPopKorn is on a mission <br /> to make Korean language fun and
           exciting.
-        </mark>
+        </div>
       </div>
     </FirstBlockStyled>
   );

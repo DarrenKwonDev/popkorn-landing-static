@@ -39,6 +39,7 @@ function ThirdBlock() {
               allow="autoplay; fullscreen"
               allowFullScreen
               className="video"
+              title="vidoe-browser"
             ></iframe>
           ) : (
             <iframe
@@ -49,14 +50,18 @@ function ThirdBlock() {
               allow="autoplay; fullscreen"
               allowFullScreen
               className="video"
+              title="vidoe-mobile"
             ></iframe>
           )}
         </div>
         <div className="textWrapper">
           <div className="title">
-            Here's how PopKorn makes <br /> learning fast and interesting
+            Here's how PopKorn makes <br /> learning interesting
           </div>
-          <div className="desc">lorem ipsum dolor sit amet</div>
+          <div className="desc">
+            Find opportunities and <br />
+            catch your dreams with PopKorn
+          </div>
         </div>
       </ThirdblockStyle>
     </>
