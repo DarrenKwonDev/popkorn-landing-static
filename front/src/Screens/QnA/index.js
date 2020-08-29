@@ -5,6 +5,7 @@ import { Collapse, Divider } from "antd";
 const Wrapper = styled.div`
   min-height: 80vh;
   padding: 1em;
+  padding-top: 75px;
 `;
 
 function QnA() {

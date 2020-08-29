@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const FirstBlockStyled = styled.div`
   position: relative;
   width: auto;
+  padding-top: 75px;
 
   .imageWrapper {
     display: flex;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Slider from "./Slider";
 
 const WholeWrapper = styled.div`
-  margin-top: 64px;
+  margin-top: 128px;
   position: relative;
 
   .BoxWrapper {
@@ -26,6 +26,19 @@ const WholeWrapper = styled.div`
     @media all and (max-width: 1023px) {
       height: 250px;
     }
+
+    .header {
+      position: relative;
+      font-size: 36px;
+      top: 18px;
+      left: 18px;
+      color: white;
+      @media all and (max-width: 1023px) {
+        font-size: 24px;
+        top: 18px;
+        left: 18px;
+      }
+    }
   }
 `;
 
@@ -33,7 +46,9 @@ function FifthBlock({ isMobile }) {
   return (
     <WholeWrapper id={"testimonials"}>
       <div className="BoxWrapper">
-        <div className="pinkBox"></div>
+        <div className="pinkBox">
+          <div className="header"> Testimonials</div>
+        </div>
       </div>
       <Slider isMobile={isMobile} />
     </WholeWrapper>

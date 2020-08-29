@@ -7,8 +7,10 @@ function FirstBlock() {
       <div className="imageWrapper">
         <img src={"about.png"} className="mainImg" alt="about"></img>
         <div className="catchphrase">
-          EduPopKorn is on a mission <br /> to make Korean language fun and
-          exciting.
+          <div>
+            EduPopKorn is on a mission <br /> to make Korean language fun and
+            exciting.
+          </div>
         </div>
       </div>
     </FirstBlockStyled>

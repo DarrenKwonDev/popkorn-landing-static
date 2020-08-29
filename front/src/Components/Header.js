@@ -31,14 +31,16 @@ const drawerImgCss = {
 const WholeWrapper = styled.div``;
 
 const HeadWrapper = styled.div`
+  position: fixed;
+  z-index: 10000;
+
   display: grid;
   align-items: center;
   justify-items: center;
   width: 100%;
+  height: 75px;
 
-  @media all and (max-width: 1023px) {
-    background-color: rgb(253, 190, 199);
-  }
+  background-color: white;
 
   grid-template-columns: auto 4fr;
   padding: 1em 2em;
@@ -145,7 +147,6 @@ function Header() {
 
       {/* drawer */}
       <DrawerWrapper
-        title="Basic Drawer"
         placement="top"
         closable={true}
         onClose={() => {
