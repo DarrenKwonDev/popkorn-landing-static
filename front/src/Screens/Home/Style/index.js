@@ -8,13 +8,17 @@ export const FirstBlockStyled = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  background-color: rgb(253, 190, 199);
   color: black;
   width: 100%;
 
   padding-top: 75px;
-
   overflow: hidden;
+
+  @media all and (max-width: 767px) {
+    padding-top: 300px;
+  }
 
   .manImage {
     position: relative;
@@ -29,14 +33,20 @@ export const FirstBlockStyled = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
   }
 
   .headTitleWrapper {
     position: absolute;
     z-index: 10;
-    text-align: center;
+    text-align: left;
+    margin-left: 64px;
+
+    @media all and (max-width: 1023px) {
+      margin-left: 32px;
+      top: 105px;
+    }
 
     .title {
       font-size: 3rem;
@@ -45,12 +55,10 @@ export const FirstBlockStyled = styled.div`
       line-height: 1.2;
 
       @media all and (max-width: 1023px) {
-        text-align: center;
         font-size: 2rem;
       }
       /* ipad에서 폰트가 너무 작에 되어서 max-width를 768에서 1px 뺌 */
       @media all and (max-width: 767px) {
-        text-align: center;
         font-size: 1.5rem;
       }
     }
@@ -60,7 +68,8 @@ export const FirstBlockStyled = styled.div`
       line-height: 1.2;
       padding: 0 4px;
       @media all and (max-width: 1023px) {
-        display: none;
+        font-size: 1.25rem;
+        /* display: none; */
       }
     }
   }
@@ -74,6 +83,11 @@ export const DownloadButton = styled.div`
   margin: 6px 0;
   font-size: 24px;
 
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.3s ease-in-out;
+  }
+
   cursor: pointer;
   i,
   img {
@@ -83,9 +97,9 @@ export const DownloadButton = styled.div`
 
   @media all and (max-width: 1023px) {
     padding: 1em 2em;
-    font-size: 12px;
+    font-size: 14px;
     img {
-      width: 12px;
+      width: 14px;
     }
   }
 `;
@@ -139,6 +153,7 @@ export const SecondblockStyle = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding-bottom: 8px;
 
       width: 80%;
       bottom: 0;

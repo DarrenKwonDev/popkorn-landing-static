@@ -107,14 +107,13 @@ function FourthBlock() {
 
   const callback = (entries, observer) => {
     entries.forEach((entry) => {
-      console.log(entry);
-      console.log(entry.length);
-
-      if (entry.isIntersecting) {
-        console.log("화면에서 노출됨");
-      } else {
-        console.log("화면에서 제외됨");
-      }
+      // console.log(entry);
+      // console.log(entry.length);
+      // if (entry.isIntersecting) {
+      //   console.log("화면에서 노출됨");
+      // } else {
+      //   console.log("화면에서 제외됨");
+      // }
     });
   };
 

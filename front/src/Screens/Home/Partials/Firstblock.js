@@ -19,8 +19,15 @@ function Firstblock() {
             </mark>
           </div>
           <div className="desc">
-            Download PopKorn and change your K-Pop stars <br />
-            into your personal teachers on your screen.
+            <mark
+              style={{
+                backgroundColor: "rgba(255,255,255,0.5)",
+                lineHeight: "1.5",
+              }}
+            >
+              Download PopKorn and change your K-Pop stars <br />
+              into your personal teachers on your screen.
+            </mark>
           </div>
         </div>
       </div>

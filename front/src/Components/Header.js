@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useCallback, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo_red from "../assets/logo_red.svg";
@@ -32,7 +32,7 @@ const WholeWrapper = styled.div``;
 
 const HeadWrapper = styled.div`
   position: fixed;
-  z-index: 10000;
+  z-index: 100;
 
   display: grid;
   align-items: center;
@@ -40,7 +40,8 @@ const HeadWrapper = styled.div`
   width: 100%;
   height: 75px;
 
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
 
   grid-template-columns: auto 4fr;
   padding: 1em 2em;
@@ -100,6 +101,8 @@ const LanguageButton = styled.button`
 `;
 
 function Header() {
+  const HeaderDom = useRef(null);
+
   const [visible, setvisible] = useState(false);
 
   const onCloseDrawer = () => {
@@ -107,7 +110,7 @@ function Header() {
   };
 
   return (
-    <WholeWrapper>
+    <WholeWrapper ref={HeaderDom}>
       <HeadWrapper>
         <div className="left-pane">
           <Link to="/">
