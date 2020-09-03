@@ -8,7 +8,6 @@ import gsap from "gsap";
 
 const OuterWrapper = styled.div`
   padding: 15em 0;
-  background-color: rgb(243, 243, 243);
 
   .textWrapper {
     display: flex;
@@ -20,6 +19,9 @@ const OuterWrapper = styled.div`
       font-size: 40px;
       font-weight: bold;
       margin-bottom: 2rem;
+      @media all and (max-width: 1023px) {
+        font-size: 30px;
+      }
     }
 
     .desc {
@@ -27,7 +29,7 @@ const OuterWrapper = styled.div`
       margin-bottom: 4rem;
       text-align: center;
       @media all and (max-width: 1023px) {
-        font-size: 2em;
+        font-size: 18px;
       }
     }
   }

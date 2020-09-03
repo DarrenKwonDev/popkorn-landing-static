@@ -52,6 +52,11 @@ const HeadWrapper = styled.div`
   grid-template-columns: auto 4fr;
   padding: 1em 2em;
 
+  @media all and (max-width: 1023px) {
+    height: 50px;
+    padding: 0.5em 2em;
+  }
+
   .left-pane {
     display: flex;
     justify-self: start;

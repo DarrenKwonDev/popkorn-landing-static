@@ -1,5 +1,6 @@
 import React from "react";
 
+import Arrow from "./Arrow";
 import { FirstBlockStyled, DownloadButton } from "../Style";
 
 function Firstblock() {
@@ -37,15 +38,9 @@ function Firstblock() {
               PopKorn Web
             </DownloadButton>
           </div>
-          {/* <div className="desc">
-            Download PopKorn and change your K-Pop stars <br />
-            into your personal teachers on your screen.
-          </div> */}
         </div>
       </div>
-      <div className="downArrow">
-        <img src={"down-arrow.png"} alt="downArrow" />
-      </div>
+      <Arrow />
     </FirstBlockStyled>
   );
 }

@@ -20,7 +20,7 @@ export const FirstBlockStyled = styled.div`
     height: 100vh;
 
     object-fit: cover;
-    object-position: center cente;
+    object-position: center center;
   }
 
   .imageAndTitle {
@@ -43,6 +43,13 @@ export const FirstBlockStyled = styled.div`
     text-align: left;
     margin-left: 128px;
 
+    @media all and (max-width: 1023px) {
+      margin-left: 0;
+      /* 헤더 높이 (50) 반영 */
+      margin-top: 75px;
+      text-align: center;
+    }
+
     .title {
       font-size: 3rem;
       font-weight: bold;
@@ -52,6 +59,7 @@ export const FirstBlockStyled = styled.div`
 
       @media all and (max-width: 1023px) {
         font-size: 2rem;
+        color: black;
       }
       /* ipad에서 폰트가 너무 작에 되어서 max-width를 768에서 1px 뺌 */
       @media all and (max-width: 767px) {
@@ -59,22 +67,10 @@ export const FirstBlockStyled = styled.div`
       }
     }
 
-    .desc {
-      font-size: 2rem;
-      line-height: 1.2;
-      padding: 0 4px;
-      color: white;
+    .ButtonWrapper {
       @media all and (max-width: 1023px) {
-        font-size: 1.25rem;
-        /* display: none; */
+        display: none;
       }
-    }
-
-    .downArrow {
-      position: absolute;
-      bottom: 55px;
-      left: 0;
-      background-color: red;
     }
   }
 `;
@@ -151,41 +147,21 @@ export const SecondblockStyle = styled.div`
         width: 300px;
       }
     }
-
-    .ButtonWrapper {
-      order: 1;
-      z-index: 10;
-
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-bottom: 8px;
-
-      width: 80%;
-      bottom: 0;
-
-      /* background-color: white; */
-      background-color: rgba(255, 255, 255, 0.85);
-
-      @media all and (max-width: 1023px) {
-        width: 100%;
-      }
-    }
   }
 `;
 
 export const ThirdblockStyle = styled.div`
   display: grid;
-  margin: 100px 0;
+  height: 100vh;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-items: center;
-  padding: 5em 0;
+
+  /* padding: 5em 0; */
 
   @media all and (max-width: 1023px) {
-    grid-template-columns: repeat(1, 1fr);
-    margin: 50px 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.6fr 0.75fr;
   }
 
   .videoWrapper {
@@ -194,19 +170,19 @@ export const ThirdblockStyle = styled.div`
 
       @media all and (max-width: 1023px) {
         order: 2;
+        align-self: start;
       }
     }
   }
 
   .textWrapper {
-    /* justify-self: start; */
     justify-self: center;
     margin-left: 32px;
 
     @media all and (max-width: 1023px) {
       justify-self: center;
       text-align: center;
-      margin-top: 2em;
+      margin-top: 1em;
       margin-left: 0;
       order: -1;
     }
@@ -217,8 +193,8 @@ export const ThirdblockStyle = styled.div`
       font-weight: bold;
       margin-bottom: 15px;
       @media all and (max-width: 1023px) {
-        font-size: 32px;
-        margin-bottom: 2em;
+        font-size: 1.5em;
+        margin-bottom: 1em;
       }
     }
 
@@ -226,8 +202,8 @@ export const ThirdblockStyle = styled.div`
       font-size: 24px;
       line-height: 1.5;
       @media all and (max-width: 1023px) {
-        font-size: 1.5em;
-        margin-bottom: 2em;
+        font-size: 16px;
+        margin-bottom: 1em;
       }
     }
   }
