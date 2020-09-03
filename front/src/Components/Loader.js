@@ -16,6 +16,8 @@ const LoaderContents = styled.div`
   backdrop-filter: blur(8px);
 
   font-size: 40px;
+
+  z-index: 10000;
 `;
 
 function Loader() {

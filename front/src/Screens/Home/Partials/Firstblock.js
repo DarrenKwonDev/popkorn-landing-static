@@ -1,6 +1,6 @@
 import React from "react";
 
-import { FirstBlockStyled } from "../Style";
+import { FirstBlockStyled, DownloadButton } from "../Style";
 
 function Firstblock() {
   return (
@@ -9,27 +9,42 @@ function Firstblock() {
         <img src={"man.png"} alt="man" className="manImage" />
         <div className="headTitleWrapper">
           <div className="title">
-            <mark
+            PopKorn makes
+            <br /> Korean language <br /> Fun and Addictive.
+          </div>
+          <div className="ButtonWrapper">
+            <DownloadButton
+              className="android"
               style={{
-                backgroundColor: "rgba(255,255,255,0.5)",
-                lineHeight: "1.5",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
-              PopKorn makes Korean language <br /> Fun and Addictive.
-            </mark>
+              <img
+                src={"playstore.png"}
+                alt="playstore_logo"
+                className="googleplay"
+              ></img>
+              Google Play
+            </DownloadButton>
+            <DownloadButton className="apple">
+              <i className="fab fa-apple"></i>
+              App store
+            </DownloadButton>
+            <DownloadButton className="web">
+              <i className="fas fa-globe-asia"></i>
+              PopKorn Web
+            </DownloadButton>
           </div>
-          <div className="desc">
-            <mark
-              style={{
-                backgroundColor: "rgba(255,255,255,0.5)",
-                lineHeight: "1.5",
-              }}
-            >
-              Download PopKorn and change your K-Pop stars <br />
-              into your personal teachers on your screen.
-            </mark>
-          </div>
+          {/* <div className="desc">
+            Download PopKorn and change your K-Pop stars <br />
+            into your personal teachers on your screen.
+          </div> */}
         </div>
+      </div>
+      <div className="downArrow">
+        <img src={"down-arrow.png"} alt="downArrow" />
       </div>
     </FirstBlockStyled>
   );

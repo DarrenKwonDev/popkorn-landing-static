@@ -28,7 +28,13 @@ const drawerImgCss = {
   width: "7rem",
 };
 
-const WholeWrapper = styled.div``;
+const WholeWrapper = styled.div`
+  .down {
+    background-color: rgba(255, 255, 255, 1) !important;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    transition: all 0.3s;
+  }
+`;
 
 const HeadWrapper = styled.div`
   position: fixed;
@@ -40,7 +46,7 @@ const HeadWrapper = styled.div`
   width: 100%;
   height: 75px;
 
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: transparent;
   backdrop-filter: blur(4px);
 
   grid-template-columns: auto 4fr;
@@ -100,107 +106,132 @@ const LanguageButton = styled.button`
   margin-right: 8px;
 `;
 
-function Header() {
-  const HeaderDom = useRef(null);
-
-  const [visible, setvisible] = useState(false);
-
-  const onCloseDrawer = () => {
-    setvisible(false);
+class Header extends React.Component {
+  state = {
+    visible: false,
+    className: "",
   };
 
-  return (
-    <WholeWrapper ref={HeaderDom}>
-      <HeadWrapper>
-        <div className="left-pane">
-          <Link to="/">
-            <img src={logo_red} className="logoImage" alt="logo"></img>
-          </Link>
-        </div>
-        <div className="right-pane">
-          <Link to="/" className="item">
-            Home
-          </Link>
+  onCloseDrawer = () => {
+    this.setState({ visible: false });
+  };
 
-          <Link to="/faq" className="item">
-            FAQ
-          </Link>
-          <Link to="/about" className="item">
-            About Us
-          </Link>
-          <Dropdown overlay={menu} className="item" trigger={["click"]}>
-            <a
-              className="ant-dropdown-link"
-              onClick={(e) => e.preventDefault()}
-              href="/#"
-            >
-              Language <DownOutlined />
-            </a>
-          </Dropdown>
-        </div>
-        <div className="hamberger">
-          <i
-            className="fas fa-bars"
-            onClick={() => {
-              setvisible(true);
-            }}
-          ></i>
-        </div>
-      </HeadWrapper>
+  handleScroll = () => {
+    if (window.pageYOffset > 0) {
+      if (!this.state.className) {
+        this.setState({ className: "down" });
+      }
+    } else {
+      this.setState({ className: "" });
+    }
+  };
 
-      {/* drawer */}
-      <DrawerWrapper
-        placement="top"
-        closable={true}
-        onClose={() => {
-          setvisible(false);
-        }}
-        title={
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "flex-start",
-            }}
-          >
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  render() {
+    return (
+      <WholeWrapper id="header">
+        <HeadWrapper className={this.state.className}>
+          <div className="left-pane">
             <Link to="/">
-              <img
-                src={logo}
-                className="logoImage"
-                style={drawerImgCss}
-                alt={"drawerLogo"}
-              ></img>
+              <img src={logo_red} className="logoImage" alt="logo"></img>
             </Link>
           </div>
-        }
-        visible={visible}
-        forceRender={true}
-        style={{}}
-      >
-        <div>
-          <Link to="/" className="drawerItems" onClick={onCloseDrawer}>
-            Home
-          </Link>
-        </div>
-        <div>
-          <Link to="/faq" className="drawerItems" onClick={onCloseDrawer}>
-            FAQ
-          </Link>
-        </div>
-        <div>
-          <Link to="/about" className="drawerItems" onClick={onCloseDrawer}>
-            About Us
-          </Link>
-        </div>
-        <div className="LangButtonWrapper">
-          <LanguageButton>Kor</LanguageButton>
-          <LanguageButton>Eng</LanguageButton>
-          <LanguageButton>Việt</LanguageButton>
-          <LanguageButton>日本語</LanguageButton>
-        </div>
-      </DrawerWrapper>
-    </WholeWrapper>
-  );
+          <div className="right-pane">
+            <Link to="/" className="item">
+              Home
+            </Link>
+
+            <Link to="/faq" className="item">
+              FAQ
+            </Link>
+            <Link to="/about" className="item">
+              About Us
+            </Link>
+            <Dropdown overlay={menu} className="item" trigger={["click"]}>
+              <a
+                className="ant-dropdown-link"
+                onClick={(e) => e.preventDefault()}
+                href="/#"
+              >
+                Language <DownOutlined />
+              </a>
+            </Dropdown>
+          </div>
+          <div className="hamberger">
+            <i
+              className="fas fa-bars"
+              onClick={() => {
+                this.setState({ visible: true });
+              }}
+            ></i>
+          </div>
+        </HeadWrapper>
+
+        {/* drawer */}
+        <DrawerWrapper
+          placement="top"
+          closable={true}
+          onClose={() => {
+            this.setState({ visible: false });
+          }}
+          title={
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "flex-start",
+              }}
+            >
+              <Link to="/">
+                <img
+                  src={logo}
+                  className="logoImage"
+                  style={drawerImgCss}
+                  alt={"drawerLogo"}
+                ></img>
+              </Link>
+            </div>
+          }
+          visible={this.state.visible}
+          forceRender={true}
+          style={{}}
+        >
+          <div>
+            <Link to="/" className="drawerItems" onClick={this.onCloseDrawer}>
+              Home
+            </Link>
+          </div>
+          <div>
+            <Link
+              to="/faq"
+              className="drawerItems"
+              onClick={this.onCloseDrawer}
+            >
+              FAQ
+            </Link>
+          </div>
+          <div>
+            <Link
+              to="/about"
+              className="drawerItems"
+              onClick={this.onCloseDrawer}
+            >
+              About Us
+            </Link>
+          </div>
+          <div className="LangButtonWrapper">
+            <LanguageButton>Kor</LanguageButton>
+            <LanguageButton>Eng</LanguageButton>
+            <LanguageButton>Việt</LanguageButton>
+            <LanguageButton>日本語</LanguageButton>
+          </div>
+        </DrawerWrapper>
+      </WholeWrapper>
+    );
+  }
 }
 
 export default Header;

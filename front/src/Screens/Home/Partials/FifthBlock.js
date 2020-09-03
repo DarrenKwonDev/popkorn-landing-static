@@ -15,7 +15,7 @@ const WholeWrapper = styled.div`
   }
 
   .pinkBox {
-    width: 80vw;
+    width: 60vw;
     height: 400px;
     position: relative;
 

@@ -9,24 +9,18 @@ export const FirstBlockStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: rgb(253, 190, 199);
   color: black;
   width: 100%;
-
-  padding-top: 75px;
   overflow: hidden;
-
-  @media all and (max-width: 767px) {
-    padding-top: 300px;
-  }
 
   .manImage {
     position: relative;
 
     width: 100%;
-    height: 100%;
+    height: 100vh;
+
     object-fit: cover;
-    object-position: center center;
+    object-position: center cente;
   }
 
   .imageAndTitle {
@@ -35,24 +29,26 @@ export const FirstBlockStyled = styled.div`
     justify-content: center;
     align-items: flex-start;
     width: 100%;
+
+    @media all and (max-width: 1023px) {
+      justify-content: flex-start;
+      align-items: center;
+      color: black;
+    }
   }
 
   .headTitleWrapper {
     position: absolute;
     z-index: 10;
     text-align: left;
-    margin-left: 64px;
-
-    @media all and (max-width: 1023px) {
-      margin-left: 32px;
-      top: 105px;
-    }
+    margin-left: 128px;
 
     .title {
       font-size: 3rem;
       font-weight: bold;
       margin-bottom: 12px;
       line-height: 1.2;
+      color: white;
 
       @media all and (max-width: 1023px) {
         font-size: 2rem;
@@ -67,10 +63,18 @@ export const FirstBlockStyled = styled.div`
       font-size: 2rem;
       line-height: 1.2;
       padding: 0 4px;
+      color: white;
       @media all and (max-width: 1023px) {
         font-size: 1.25rem;
         /* display: none; */
       }
+    }
+
+    .downArrow {
+      position: absolute;
+      bottom: 55px;
+      left: 0;
+      background-color: red;
     }
   }
 `;
@@ -78,13 +82,16 @@ export const FirstBlockStyled = styled.div`
 export const DownloadButton = styled.div`
   width: 90%;
   padding: 1.2em 2.4em;
-  border-radius: 12px;
+  border-radius: 6px;
   text-align: center;
   margin: 6px 0;
-  font-size: 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid white;
+  color: white;
 
   &:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    background-color: rgba(256, 256, 256, 0.2) !important;
     transition: all 0.3s ease-in-out;
   }
 
@@ -147,7 +154,7 @@ export const SecondblockStyle = styled.div`
 
     .ButtonWrapper {
       order: 1;
-      z-index: 100;
+      z-index: 10;
 
       position: absolute;
       display: flex;

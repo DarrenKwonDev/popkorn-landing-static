@@ -31,7 +31,7 @@ function Slider({ isMobile }) {
         disableOnInteraction: false,
       }}
       spaceBetween={50}
-      slidesPerView={isMobile ? 2 : 3}
+      slidesPerView={isMobile ? 2 : 4}
     >
       <SwiperSlide style={SlideItemStyle}>
         <ReviewCard

@@ -7,7 +7,7 @@ import improve from "../../../assets/improve.svg";
 import gsap from "gsap";
 
 const OuterWrapper = styled.div`
-  padding: 5em 0;
+  padding: 15em 0;
   background-color: rgb(243, 243, 243);
 
   .textWrapper {

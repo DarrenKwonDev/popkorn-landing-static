@@ -34,8 +34,9 @@ function Home() {
   return (
     <HomeWrapper>
       <Firstblock />
-      <Secondblock />
+      {/* 3번째 블록이 먼저 나오는 이유는 비디오를 먼저 올려달라고 해서... */}
       <ThirdBlock />
+      <Secondblock />
       <FourthBlock />
       <FifthBlock isMobile={isMobile} />
     </HomeWrapper>
