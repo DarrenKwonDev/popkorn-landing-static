@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     }
     * {
        box-sizing: border-box;
+       -webkit-overflow-scrolling: touch;
     }
     a {
         text-decoration:none;

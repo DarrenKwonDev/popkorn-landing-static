@@ -1,5 +1,8 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
+import smoothscroll from "smoothscroll-polyfill";
+
+smoothscroll.polyfill();
 
 const ArrowAnimation = keyframes`
   0% {
@@ -34,7 +37,6 @@ const StyledArrorw = styled.div`
 `;
 
 const onClick = () => {
-  console.log("click");
   let pageHeight = window.innerHeight;
 
   window.scrollTo({ top: pageHeight, behavior: "smooth" });

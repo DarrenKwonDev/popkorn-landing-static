@@ -21,6 +21,11 @@ export const FirstBlockStyled = styled.div`
 
     object-fit: cover;
     object-position: center center;
+
+    @media all and (max-width: 1023px) {
+      background-color: rgba(0, 0, 0, 0.3);
+      opacity: 0.5;
+    }
   }
 
   .imageAndTitle {
@@ -46,7 +51,7 @@ export const FirstBlockStyled = styled.div`
     @media all and (max-width: 1023px) {
       margin-left: 0;
       /* 헤더 높이 (50) 반영 */
-      margin-top: 75px;
+      margin-top: 150px;
       text-align: center;
     }
 
@@ -63,13 +68,31 @@ export const FirstBlockStyled = styled.div`
       }
       /* ipad에서 폰트가 너무 작에 되어서 max-width를 768에서 1px 뺌 */
       @media all and (max-width: 767px) {
-        font-size: 1.5rem;
+        font-size: 2rem;
       }
     }
 
     .ButtonWrapper {
+      width: 100%;
       @media all and (max-width: 1023px) {
-        display: none;
+        position: absolute;
+        margin-top: 30px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .android,
+        .apple {
+          background-color: black;
+          border: 1px solid rgb(166, 166, 166);
+        }
+
+        .web {
+          background-color: rgb(255, 185, 195);
+          border: 1px solid transparent;
+        }
       }
     }
   }
@@ -85,11 +108,11 @@ export const DownloadButton = styled.div`
   font-weight: bold;
   border: 1px solid white;
   color: white;
-
+  /* 
   &:hover {
     background-color: rgba(256, 256, 256, 0.2) !important;
     transition: all 0.3s ease-in-out;
-  }
+  } */
 
   cursor: pointer;
   i,
@@ -151,58 +174,55 @@ export const SecondblockStyle = styled.div`
 `;
 
 export const ThirdblockStyle = styled.div`
-  display: grid;
-  height: 100vh;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-items: center;
+  justify-items: flex-end;
 
-  /* padding: 5em 0; */
+  height: 100vh;
+  background-color: #f2f3f3;
 
-  @media all and (max-width: 1023px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.6fr 0.75fr;
+  .embed-container {
+    margin-top: 16px;
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    height: calc(100vh - 350px);
   }
 
-  .videoWrapper {
-    .video {
-      justify-self: flex-end;
+  .embed-container iframe,
+  .embed-container object,
+  .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
-      @media all and (max-width: 1023px) {
-        order: 2;
-        align-self: start;
-      }
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .textWrapper {
     justify-self: center;
-    margin-left: 32px;
+    text-align: center;
 
     @media all and (max-width: 1023px) {
       justify-self: center;
       text-align: center;
       margin-top: 1em;
       margin-left: 0;
-      order: -1;
     }
 
     .title {
+      margin-top: 128px;
       font-size: 40px;
       line-height: 1.5;
       font-weight: bold;
       margin-bottom: 15px;
       @media all and (max-width: 1023px) {
         font-size: 1.5em;
-        margin-bottom: 1em;
-      }
-    }
-
-    .desc {
-      font-size: 24px;
-      line-height: 1.5;
-      @media all and (max-width: 1023px) {
-        font-size: 16px;
         margin-bottom: 1em;
       }
     }

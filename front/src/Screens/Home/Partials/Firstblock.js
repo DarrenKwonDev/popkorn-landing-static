@@ -11,7 +11,10 @@ function Firstblock() {
         <div className="headTitleWrapper">
           <div className="title">
             PopKorn makes
-            <br /> Korean language <br /> Fun and Addictive.
+            <br />
+            Korean language
+            <br />
+            Fun and Addictive.
           </div>
           <div className="ButtonWrapper">
             <DownloadButton
