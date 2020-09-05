@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
     ${reset}
     body, html {
         height: 100%;
+        color: black;
     }
     * {
        box-sizing: border-box;
@@ -22,6 +23,8 @@ const GlobalStyle = createGlobalStyle`
     h4 {
       font-weight: bold;  
     }
+    strong { font-weight: 800; }
+
 `;
 
 export default GlobalStyle;

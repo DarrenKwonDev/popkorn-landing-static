@@ -46,7 +46,7 @@ export const FirstBlockStyled = styled.div`
     position: absolute;
     z-index: 10;
     text-align: left;
-    margin-left: 128px;
+    margin-left: 256px;
 
     @media all and (max-width: 1023px) {
       margin-left: 0;
@@ -86,12 +86,13 @@ export const FirstBlockStyled = styled.div`
         .android,
         .apple {
           background-color: black;
-          border: 1px solid rgb(166, 166, 166);
+          border: 1px solid black;
+          /* border: 1px solid rgb(166, 166, 166); */
         }
 
         .web {
-          background-color: rgb(255, 185, 195);
-          border: 1px solid transparent;
+          background-color: rgb(231, 40, 106);
+          border: 1px solid rgb(231, 40, 106);
         }
       }
     }
@@ -108,11 +109,6 @@ export const DownloadButton = styled.div`
   font-weight: bold;
   border: 1px solid white;
   color: white;
-  /* 
-  &:hover {
-    background-color: rgba(256, 256, 256, 0.2) !important;
-    transition: all 0.3s ease-in-out;
-  } */
 
   cursor: pointer;
   i,
@@ -132,25 +128,29 @@ export const DownloadButton = styled.div`
 
 export const SecondblockStyle = styled.div`
   position: relative;
+
   display: flex;
-  flex-direction: column;
   align-items: center;
+
   color: black;
+
   width: 100%;
-  padding: 5em 0;
+  height: 100vh;
+
+  padding: 0 12rem;
 
   overflow: hidden;
 
-  .canvas {
-    position: absolute;
-    z-index: -1;
+  @media all and (max-width: 1023px) {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
   }
 
   .ImageAndButtons {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
 
     @media all and (max-width: 1023px) {
       flex-direction: column;
@@ -159,15 +159,35 @@ export const SecondblockStyle = styled.div`
 
     .mainImg {
       position: relative;
-      width: 700px;
-      margin-top: 36px;
+      width: calc(100vw / 2.1);
+      /* width: calc(100vw / 2); */
 
       @media all and (max-width: 1023px) {
-        width: 500px;
+        width: 100vw;
       }
+    }
+  }
 
-      @media all and (max-width: 768px) {
-        width: 300px;
+  .descWrapper {
+    .desc1 {
+      text-align: right;
+      font-size: 32px;
+      line-height: 1.5;
+
+      @media all and (max-width: 1023px) {
+        font-size: 1.25rem;
+        text-align: center;
+      }
+    }
+
+    .desc2 {
+      text-align: right;
+      font-size: 20px;
+      line-height: 1.5;
+
+      @media all and (max-width: 1023px) {
+        font-size: 1rem;
+        text-align: center;
       }
     }
   }
@@ -187,7 +207,7 @@ export const ThirdblockStyle = styled.div`
     position: relative;
     overflow: hidden;
     width: 90%;
-    height: calc(100vh - 350px);
+    height: calc(100vh - 400px);
   }
 
   .embed-container iframe,

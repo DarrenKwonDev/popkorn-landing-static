@@ -3,19 +3,17 @@ import { Avatar } from "antd";
 import styled from "styled-components";
 
 const ReviewCardWrapper = styled.div`
-  width: calc(100vw / 4.5);
+  width: 300px;
   height: 225px;
   border-radius: 12px;
 
   padding: 1em;
 
   background-color: white;
-  box-shadow: 0px 6px 0px 0px rgba(217, 46, 217, 0.71);
+  box-shadow: 0px 6px 0px 0px rgba(217, 46, 217, 0.3);
 
   @media all and (max-width: 1023px) {
-    margin-left: calc(100vw / 6);
-
-    width: calc(100vw / 2);
+    width: 300px;
     height: 170px;
   }
 

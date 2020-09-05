@@ -4,10 +4,9 @@ import search from "../../../assets/search.svg";
 import watch from "../../../assets/watch.svg";
 import learn from "../../../assets/learn.svg";
 import improve from "../../../assets/improve.svg";
-import gsap from "gsap";
 
 const OuterWrapper = styled.div`
-  padding: 15em 0;
+  height: 100vh;
 
   .textWrapper {
     display: flex;
@@ -37,15 +36,23 @@ const OuterWrapper = styled.div`
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 600px);
+  grid-template-rows: repeat(2, 450px);
+  place-content: center;
 
   @media all and (max-width: 1023px) {
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 200px);
     justify-items: center;
   }
 `;
 
 const Chunk = styled.div`
+  /* 부모 그리드를 위한 속성  */
+  align-self: center;
+  justify-self: center;
+
+  /* 본연의 속성 */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,21 +77,32 @@ const Chunk = styled.div`
   }
 
   img {
-    width: 75%;
+    width: 75px;
+
+    @media all and (max-width: 1023px) {
+      width: 45px;
+    }
   }
 
   .chunktitle {
     margin-top: 16px;
     margin-bottom: 16px;
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    @media all and (max-width: 1023px) {
+      font-size: 1.25rem;
+    }
   }
 
   .chunkDesc {
     text-align: center;
     align-self: center;
     line-height: 1.5;
+    font-size: 1.5rem;
+    width: 400px;
+
     @media all and (max-width: 1023px) {
+      font-size: 1.15rem;
       margin-left: 25px;
       text-align: left;
     }

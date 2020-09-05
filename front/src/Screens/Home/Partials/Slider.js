@@ -30,8 +30,9 @@ function Slider({ isMobile }) {
         delay: 750,
         disableOnInteraction: false,
       }}
+      loop
       spaceBetween={50}
-      slidesPerView={isMobile ? 2 : 4}
+      slidesPerView={isMobile ? 3 : 6}
     >
       <SwiperSlide style={SlideItemStyle}>
         <ReviewCard
@@ -50,6 +51,24 @@ function Slider({ isMobile }) {
             "An addictive and fun way to learn new language with my phone without stress"
           }
         />
+      </SwiperSlide>
+      <SwiperSlide style={SlideItemStyle}>
+        <ReviewCard name={"test"} image={""} reivew={"dksskdfkajf"} />
+      </SwiperSlide>
+      <SwiperSlide style={SlideItemStyle}>
+        <ReviewCard name={"test"} image={""} reivew={"dksskdfkajf"} />
+      </SwiperSlide>
+      <SwiperSlide style={SlideItemStyle}>
+        <ReviewCard name={"test"} image={""} reivew={"dksskdfkajf"} />
+      </SwiperSlide>
+      <SwiperSlide style={SlideItemStyle}>
+        <ReviewCard name={"test"} image={""} reivew={"dksskdfkajf"} />
+      </SwiperSlide>
+      <SwiperSlide style={SlideItemStyle}>
+        <ReviewCard name={"test"} image={""} reivew={"dksskdfkajf"} />
+      </SwiperSlide>
+      <SwiperSlide style={SlideItemStyle}>
+        <ReviewCard name={"test"} image={""} reivew={"dksskdfkajf"} />
       </SwiperSlide>
       <SwiperSlide style={SlideItemStyle}>
         <ReviewCard name={"test"} image={""} reivew={"dksskdfkajf"} />

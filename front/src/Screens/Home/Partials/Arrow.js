@@ -32,7 +32,7 @@ const StyledArrorw = styled.div`
 
   img {
     cursor: pointer;
-    width: 48px;
+    width: 64px;
   }
 `;
 

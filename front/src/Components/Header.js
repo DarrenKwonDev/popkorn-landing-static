@@ -32,7 +32,7 @@ const WholeWrapper = styled.div`
   .down {
     background-color: rgba(255, 255, 255, 1) !important;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
-    transition: all 0.3s;
+    transition: all 0.2s;
   }
 `;
 
@@ -59,12 +59,26 @@ const HeadWrapper = styled.div`
 
   .left-pane {
     display: flex;
+    align-items: center;
     justify-self: start;
 
     .logoImage {
+      display: inline-block;
       width: 2rem;
       @media all and (max-width: 1023px) {
         /* width: 2rem; */
+      }
+    }
+
+    .logotext {
+      margin-left: 16px;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: rgb(231, 40, 106);
+
+      @media all and (max-width: 1023px) {
+        margin-left: 8px;
+        font-size: 1rem;
       }
     }
   }
@@ -139,11 +153,12 @@ class Header extends React.Component {
     return (
       <WholeWrapper id="header">
         <HeadWrapper className={this.state.className}>
-          <div className="left-pane">
-            <Link to="/">
+          <Link to="/">
+            <div className="left-pane">
               <img src={logo_red} className="logoImage" alt="logo"></img>
-            </Link>
-          </div>
+              <div className="logotext">EduPopKorn</div>
+            </div>
+          </Link>
           <div className="right-pane">
             <Link to="/" className="item">
               Home
