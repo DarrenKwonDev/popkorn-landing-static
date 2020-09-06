@@ -6,13 +6,39 @@ import learn from "../../../assets/learn.svg";
 import improve from "../../../assets/improve.svg";
 
 const OuterWrapper = styled.div`
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+
   height: 100vh;
+  padding: 3em 0;
+
+  background-image: linear-gradient(
+      rgba(231, 40, 106, 0.75),
+      rgba(231, 40, 106, 0.75)
+    ),
+    url("team.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .featurebackground {
+    z-index: -10;
+
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+  }
 
   .textWrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    color: white;
 
     .features {
       font-size: 40px;
@@ -36,13 +62,22 @@ const OuterWrapper = styled.div`
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 600px);
-  grid-template-rows: repeat(2, 450px);
+  grid-template-columns: repeat(2, 500px);
+  grid-template-rows: repeat(2, 275px);
   place-content: center;
 
+  align-items: center;
+  justify-items: center;
+
   @media all and (max-width: 1023px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 200px);
+    /* Chunk의 사이즈와 같아야 함
+    grid-template-columns: 80vw;
+    grid-template-rows: repeat(4, 150px); */
+
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 6px;
     justify-items: center;
   }
 `;
@@ -54,43 +89,60 @@ const Chunk = styled.div`
 
   /* 본연의 속성 */
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-items: flex-start;
-  padding: 1em;
+  justify-content: center;
+
+  padding: 12px 12px;
+  background-color: white;
+  border-radius: 12px;
+
+  height: 225px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 
   @media all and (max-width: 1023px) {
-    flex-direction: row;
-    width: 300px;
+    height: 150px;
+    width: 80vw;
+  }
+
+  .innerChunk {
+    @media all and (max-width: 1023px) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      /* Chunk width와 같아야 함 */
+      width: 70vw;
+    }
   }
 
   .chunkUpperWrapper {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
-    justify-items: flex-start;
+    justify-content: center;
 
     @media all and (max-width: 1023px) {
-      width: 3rem;
       justify-items: center;
+      align-items: flex-start;
     }
   }
 
   img {
-    width: 75px;
+    width: 55px;
 
     @media all and (max-width: 1023px) {
-      width: 45px;
+      width: 35px;
     }
   }
 
   .chunktitle {
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin: 16px 0 16px 16px;
     font-weight: bold;
     font-size: 1.5rem;
     @media all and (max-width: 1023px) {
-      font-size: 1.25rem;
+      margin: 8px 0 8px 8px;
+      font-size: 1.15rem;
     }
   }
 
@@ -102,15 +154,11 @@ const Chunk = styled.div`
     width: 400px;
 
     @media all and (max-width: 1023px) {
-      font-size: 1.15rem;
-      margin-left: 25px;
+      font-size: 1rem;
       text-align: left;
-    }
-  }
 
-  @media all and (max-width: 1023px) {
-    .chunkDesc {
-      margin-bottom: 16px;
+      /* Chunk width와 같아야 함 */
+      width: 70vw;
     }
   }
 `;
@@ -156,47 +204,49 @@ function FourthBlock() {
       </div>
 
       <Wrapper>
-        <Chunk
-          ref={searchChunk}
-          className="animate__animated animate__slideInUp"
-        >
-          <div className="chunkUpperWrapper">
-            <img src={search} alt="search"></img>
-            <div className="chunktitle">Search</div>
-          </div>
-          <div className="chunkDesc">
-            Find your K-Pop Stars, <br /> favorite dramas and movies. <br />
-            1000+ videos to watch!
+        <Chunk ref={searchChunk}>
+          <div className="innerChunk">
+            <div className="chunkUpperWrapper">
+              <img src={search} alt="search"></img>
+              <div className="chunktitle">Search</div>
+            </div>
+            <div className="chunkDesc">
+              Find your K-Pop Stars, <br /> favorite dramas and movies. <br />
+            </div>
           </div>
         </Chunk>
         <Chunk>
-          <div className="chunkUpperWrapper" ref={watchChunk}>
-            <img src={watch} alt="watch"></img>
-            <div className="chunktitle">Watch</div>
-          </div>
-          <div className="chunkDesc">
-            Watch the videos with subtitles. <br /> Solve quick quizzes about
-            the video and keep watching!
-          </div>
-        </Chunk>
-        <Chunk>
-          <div className="chunkUpperWrapper" ref={learnChunk}>
-            <img src={learn} alt="learn"></img>
-            <div className="chunktitle">Learn</div>
-          </div>
-          <div className="chunkDesc">
-            Fix your pronounciation with EdupopKorn TTS AI service. <br />
-            Repeat after us! Solve ToPik tests and watch lectures.
+          <div className="innerChunk">
+            <div className="chunkUpperWrapper" ref={watchChunk}>
+              <img src={watch} alt="watch"></img>
+              <div className="chunktitle">Watch</div>
+            </div>
+            <div className="chunkDesc">
+              Watch the videos with subtitles. <br /> Solve quick quizzes about
+              the video!
+            </div>
           </div>
         </Chunk>
         <Chunk>
-          <div className="chunkUpperWrapper" ref={improveChunk}>
-            <img src={improve} alt="improve"></img>
-            <div className="chunktitle">Improve</div>
+          <div className="innerChunk">
+            <div className="chunkUpperWrapper" ref={learnChunk}>
+              <img src={learn} alt="learn"></img>
+              <div className="chunktitle">Learn</div>
+            </div>
+            <div className="chunkDesc">
+              Fix your pronounciation with EdupopKorn TTS AI service.
+            </div>
           </div>
-          <div className="chunkDesc">
-            Watch lectures provided by our selected educators. <br /> Study with
-            your idols and teachers.
+        </Chunk>
+        <Chunk>
+          <div className="innerChunk">
+            <div className="chunkUpperWrapper" ref={improveChunk}>
+              <img src={improve} alt="improve"></img>
+              <div className="chunktitle">Improve</div>
+            </div>
+            <div className="chunkDesc">
+              Watch lectures provided by our selected educators.
+            </div>
           </div>
         </Chunk>
       </Wrapper>

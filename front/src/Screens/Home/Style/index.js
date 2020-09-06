@@ -148,6 +148,7 @@ export const SecondblockStyle = styled.div`
   }
 
   .ImageAndButtons {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -164,6 +165,18 @@ export const SecondblockStyle = styled.div`
 
       @media all and (max-width: 1023px) {
         width: 100vw;
+      }
+    }
+
+    i {
+      position: absolute;
+      right: 32px;
+      bottom: 32px;
+      color: rgb(231, 40, 106);
+      font-size: 64px;
+
+      @media all and (max-width: 1023px) {
+        font-size: 48px;
       }
     }
   }

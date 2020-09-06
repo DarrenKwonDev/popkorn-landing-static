@@ -32,7 +32,7 @@ function Slider({ isMobile }) {
       }}
       loop
       spaceBetween={50}
-      slidesPerView={isMobile ? 3 : 6}
+      slidesPerView={isMobile ? 2 : 6}
     >
       <SwiperSlide style={SlideItemStyle}>
         <ReviewCard

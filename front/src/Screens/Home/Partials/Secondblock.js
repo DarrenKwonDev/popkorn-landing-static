@@ -1,5 +1,4 @@
 import React from "react";
-
 import { SecondblockStyle } from "../Style";
 
 function Secondblock() {
@@ -7,7 +6,14 @@ function Secondblock() {
     <SecondblockStyle>
       <div className="ImageAndButtons">
         <img src={"phone.png"} className="mainImg" alt="phoneImage"></img>
+
+        <div>
+          <a href={"https://edupopkorn.com"}>
+            <i className="fas fa-play-circle"></i>
+          </a>
+        </div>
       </div>
+
       <div className="descWrapper">
         <div className="desc1">
           Get into{" "}

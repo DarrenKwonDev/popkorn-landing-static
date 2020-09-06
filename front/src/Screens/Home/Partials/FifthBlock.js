@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Slider from "./Slider";
 
 const WholeWrapper = styled.div`
-  margin-top: 128px;
+  margin-top: 518px;
   position: relative;
 
   .BoxWrapper {
