@@ -47,7 +47,6 @@ const HeadWrapper = styled.div`
   height: 75px;
 
   background-color: transparent;
-  backdrop-filter: blur(4px);
 
   grid-template-columns: auto 4fr;
   padding: 1em 2em;

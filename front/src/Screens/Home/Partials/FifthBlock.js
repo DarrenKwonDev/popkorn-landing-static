@@ -5,6 +5,7 @@ import Slider from "./Slider";
 const WholeWrapper = styled.div`
   margin-top: 518px;
   position: relative;
+  background-color: #f6f9fc;
 
   .BoxWrapper {
     display: flex;

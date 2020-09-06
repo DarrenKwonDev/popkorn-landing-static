@@ -2,7 +2,13 @@ import styled from "styled-components";
 
 export const HomeWrapper = styled.div`
   width: 100%;
+  background-color: #f6f9fc;
 `;
+
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty("--vh", `${vh}px`);
 
 export const FirstBlockStyled = styled.div`
   position: relative;
@@ -17,7 +23,9 @@ export const FirstBlockStyled = styled.div`
     position: relative;
 
     width: 100%;
+
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
 
     object-fit: cover;
     object-position: center center;
@@ -86,13 +94,15 @@ export const FirstBlockStyled = styled.div`
         .android,
         .apple {
           background-color: black;
-          border: 1px solid black;
-          /* border: 1px solid rgb(166, 166, 166); */
+          background-image: linear-gradient(56deg, #0a0709, #171921);
+          box-shadow: 0 2px 2px 0 rgba(32, 35, 44, 0.15);
         }
 
         .web {
           background-color: rgb(231, 40, 106);
-          border: 1px solid rgb(231, 40, 106);
+          background-image: linear-gradient(56deg, #e8276b, #d837dd);
+
+          box-shadow: 0 2px 2px 0 rgba(32, 35, 44, 0.15);
         }
       }
     }
@@ -120,6 +130,7 @@ export const DownloadButton = styled.div`
   @media all and (max-width: 1023px) {
     padding: 1em 2em;
     font-size: 14px;
+    border: none;
     img {
       width: 14px;
     }
@@ -132,14 +143,22 @@ export const SecondblockStyle = styled.div`
   display: flex;
   align-items: center;
 
-  color: black;
+  color: white;
 
   width: 100%;
   height: 100vh;
-
   padding: 0 12rem;
 
   overflow: hidden;
+
+  background-image: linear-gradient(
+      rgba(231, 40, 106, 0.75),
+      rgba(231, 40, 106, 0.75)
+    ),
+    url("team.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   @media all and (max-width: 1023px) {
     flex-direction: column;
@@ -161,31 +180,28 @@ export const SecondblockStyle = styled.div`
     .mainImg {
       position: relative;
       width: calc(100vw / 2.1);
-      /* width: calc(100vw / 2); */
 
       @media all and (max-width: 1023px) {
-        width: 100vw;
-      }
-    }
-
-    i {
-      position: absolute;
-      right: 32px;
-      bottom: 32px;
-      color: rgb(231, 40, 106);
-      font-size: 64px;
-
-      @media all and (max-width: 1023px) {
-        font-size: 48px;
+        width: 80vw;
       }
     }
   }
 
   .descWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+    @media all and (max-width: 1023px) {
+      align-items: center;
+    }
+
     .desc1 {
       text-align: right;
       font-size: 32px;
       line-height: 1.5;
+      margin-bottom: 16px;
 
       @media all and (max-width: 1023px) {
         font-size: 1.25rem;
@@ -197,10 +213,41 @@ export const SecondblockStyle = styled.div`
       text-align: right;
       font-size: 20px;
       line-height: 1.5;
+      margin-bottom: 36px;
 
       @media all and (max-width: 1023px) {
         font-size: 1rem;
         text-align: center;
+      }
+    }
+
+    .discover {
+      background-color: white;
+      border-radius: 6px;
+      color: #e7286a;
+      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+
+      &:hover {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+          0 10px 10px rgba(0, 0, 0, 0.22);
+        transition: box-shadow 0.2s ease;
+      }
+
+      width: 200px;
+
+      padding: 1.2em 2.4em;
+      margin: 6px 0;
+      text-align: center;
+
+      font-size: 18px;
+      font-weight: bold;
+
+      cursor: pointer;
+
+      @media all and (max-width: 1023px) {
+        padding: 1em 2em;
+        font-size: 14px;
+        border: none;
       }
     }
   }
@@ -213,13 +260,14 @@ export const ThirdblockStyle = styled.div`
   justify-items: flex-end;
 
   height: 100vh;
-  background-color: #f2f3f3;
+  background-color: rgb(246, 249, 252);
 
   .embed-container {
     margin-top: 16px;
     position: relative;
     overflow: hidden;
     width: 90%;
+    border-radius: 12px;
     height: calc(100vh - 400px);
   }
 

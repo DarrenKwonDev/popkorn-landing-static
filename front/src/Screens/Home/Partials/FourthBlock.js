@@ -14,14 +14,7 @@ const OuterWrapper = styled.div`
   height: 100vh;
   padding: 3em 0;
 
-  background-image: linear-gradient(
-      rgba(231, 40, 106, 0.75),
-      rgba(231, 40, 106, 0.75)
-    ),
-    url("team.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-color: #f6f9fc;
 
   .featurebackground {
     z-index: -10;
@@ -37,8 +30,6 @@ const OuterWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    color: white;
 
     .features {
       font-size: 40px;
@@ -97,7 +88,6 @@ const Chunk = styled.div`
   border-radius: 12px;
 
   height: 225px;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 
   @media all and (max-width: 1023px) {
     height: 150px;

@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 const FooterWrapper = styled.div`
   position: absolute;
   /* bottom: 0; */
-  margin-top: 5em;
-  background-color: rgb(234, 234, 234);
+  /* background-color: rgb(234, 234, 234); */
+  background-color: #f6f9fc;
 
   width: 100%;
   padding: 2em 5em;
