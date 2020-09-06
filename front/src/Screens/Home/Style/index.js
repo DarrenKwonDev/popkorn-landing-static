@@ -64,14 +64,14 @@ export const FirstBlockStyled = styled.div`
     }
 
     .title {
-      font-size: 3rem;
+      font-size: 40px;
       font-weight: bold;
       margin-bottom: 12px;
       line-height: 1.2;
       color: white;
 
       @media all and (max-width: 1023px) {
-        font-size: 2rem;
+        font-size: 40px;
         color: black;
       }
       /* ipad에서 폰트가 너무 작에 되어서 max-width를 768에서 1px 뺌 */
@@ -147,6 +147,8 @@ export const SecondblockStyle = styled.div`
 
   width: 100%;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+
   padding: 0 12rem;
 
   overflow: hidden;

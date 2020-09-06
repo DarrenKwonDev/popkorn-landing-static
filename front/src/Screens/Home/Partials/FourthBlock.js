@@ -5,6 +5,9 @@ import watch from "../../../assets/watch.svg";
 import learn from "../../../assets/learn.svg";
 import improve from "../../../assets/improve.svg";
 
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty("--vh", `${vh}px`);
+
 const OuterWrapper = styled.div`
   /* display: flex;
   flex-direction: column;
@@ -12,6 +15,7 @@ const OuterWrapper = styled.div`
   align-items: center; */
 
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   padding: 3em 0;
 
   background-color: #f6f9fc;
@@ -189,7 +193,7 @@ function FourthBlock() {
       <div className="textWrapper">
         <div className="features">Features</div>
         <div className="desc">
-          EduPopKorn’s Mission expands beyong education.
+          EduPopKorn’s Mission expands beyond education.
         </div>
       </div>
 

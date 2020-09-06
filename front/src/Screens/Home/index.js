@@ -4,7 +4,7 @@ import Firstblock from "./Partials/Firstblock";
 import Secondblock from "./Partials/Secondblock";
 import ThirdBlock from "./Partials/ThirdBlock";
 import FourthBlock from "./Partials/FourthBlock";
-import FifthBlock from "./Partials/FifthBlock";
+import Testimonials from "./Partials/Testimonials";
 
 function Home() {
   const [isMobile, setisMobile] = useState(false);
@@ -38,7 +38,7 @@ function Home() {
       <ThirdBlock />
       <Secondblock />
       <FourthBlock />
-      <FifthBlock isMobile={isMobile} />
+      <Testimonials isMobile={isMobile} />
     </HomeWrapper>
   );
 }

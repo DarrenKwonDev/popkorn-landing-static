@@ -10,77 +10,70 @@ import "swiper/swiper-bundle.css";
 SwiperCore.use([Autoplay]);
 
 const StyledSwiper = styled(Swiper)`
-  position: absolute;
-  bottom: 300px;
-  left: 0%;
+  /* position: absolute; */
+  /* bottom: 300px; */
+  /* left: 0%; */
 
   @media all and (max-width: 1023px) {
-    bottom: 200px;
+    /* bottom: 200px; */
   }
 `;
 
 const SlideItemStyle = {
-  height: "350px",
+  // backgroundColor: "crimson",
+  // border: "2px solid black",
+  width: "90vw",
+  display: "flex",
 };
 
 function Slider({ isMobile }) {
   return (
     <StyledSwiper
       autoplay={{
-        delay: 750,
+        delay: 1000,
         disableOnInteraction: false,
       }}
       loop
-      spaceBetween={50}
-      slidesPerView={isMobile ? 2 : 6}
+      direction={"vertical"}
+      // 슬라이더 사이의 간격
+      spaceBetween={5}
+      // 슬라이드 몇 개씩 보여줄거야?
+      slidesPerView={3}
+      // 슬라이드가 몇 개씩 넘어갈 거야?
+      slidesPerGroup={1}
+      // autoHeight={true}
     >
       <SwiperSlide style={SlideItemStyle}>
         <ReviewCard
-          name={"John Fang"}
+          name={"John Doe"}
           image={""}
-          reivew={
-            "Most practical way to learn Korean. Teaches dialogues that will be useful when I visit Korea. Very clever!"
-          }
+          reivew={"askdfha;ksdgf;dsbfkj;agsd;jifkbsadkj;fgahjsdgflhsdfj"}
         />
       </SwiperSlide>
       <SwiperSlide style={SlideItemStyle}>
         <ReviewCard
-          name={"Jeny Doe"}
+          name={"John Doe"}
           image={""}
           reivew={
-            "An addictive and fun way to learn new language with my phone without stress"
+            "It defines whether the flex items are forced in a single line or can be flowed into multiple lines. If set to multiple lines, "
           }
         />
       </SwiperSlide>
       <SwiperSlide style={SlideItemStyle}>
-        <ReviewCard name={"test"} image={""} reivew={"dksskdfkajf"} />
+        <ReviewCard />
       </SwiperSlide>
       <SwiperSlide style={SlideItemStyle}>
-        <ReviewCard name={"test"} image={""} reivew={"dksskdfkajf"} />
+        <ReviewCard />
       </SwiperSlide>
       <SwiperSlide style={SlideItemStyle}>
-        <ReviewCard name={"test"} image={""} reivew={"dksskdfkajf"} />
+        <ReviewCard
+          name={"John Doe"}
+          image={""}
+          reivew={"askdfha;ksdgf;dsbfkj;agsd;jifkbsadkj;fgahjsdgflhsdfj"}
+        />
       </SwiperSlide>
       <SwiperSlide style={SlideItemStyle}>
-        <ReviewCard name={"test"} image={""} reivew={"dksskdfkajf"} />
-      </SwiperSlide>
-      <SwiperSlide style={SlideItemStyle}>
-        <ReviewCard name={"test"} image={""} reivew={"dksskdfkajf"} />
-      </SwiperSlide>
-      <SwiperSlide style={SlideItemStyle}>
-        <ReviewCard name={"test"} image={""} reivew={"dksskdfkajf"} />
-      </SwiperSlide>
-      <SwiperSlide style={SlideItemStyle}>
-        <ReviewCard name={"test"} image={""} reivew={"dksskdfkajf"} />
-      </SwiperSlide>
-      <SwiperSlide style={SlideItemStyle}>
-        <ReviewCard name={"test"} image={""} reivew={"dksskdfkajf"} />
-      </SwiperSlide>
-      <SwiperSlide style={SlideItemStyle}>
-        <ReviewCard name={"test"} image={""} reivew={"dksskdfkajf"} />
-      </SwiperSlide>
-      <SwiperSlide style={SlideItemStyle}>
-        <ReviewCard name={"test"} image={""} reivew={"dksskdfkajf"} />
+        <ReviewCard />
       </SwiperSlide>
     </StyledSwiper>
   );

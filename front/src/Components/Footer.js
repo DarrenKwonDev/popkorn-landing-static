@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../assets/logo.svg";
 import logo_red from "../assets/logo_red.svg";
 
 import { Avatar } from "antd";
 import { Link } from "react-router-dom";
 
 const FooterWrapper = styled.div`
-  position: absolute;
+  /* position: absolute; */
   /* bottom: 0; */
   /* background-color: rgb(234, 234, 234); */
   background-color: #f6f9fc;
@@ -16,17 +15,16 @@ const FooterWrapper = styled.div`
   padding: 2em 5em;
   color: #6b7684;
 
-  @media all and (max-width: 1023px) {
-    padding: 2em;
-  }
-
   line-height: 1.5;
 
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  align-items: start;
+  justify-items: center;
 
   @media all and (max-width: 1023px) {
     font-size: 1rem;
+    padding: 2em;
 
     grid-template-columns: 1.5fr 1fr;
     grid-template-rows: 1fr 0.5fr 0.5fr;
@@ -38,9 +36,6 @@ const FooterWrapper = styled.div`
       align-self: start;
     }
   }
-
-  align-items: start;
-  justify-items: center;
 
   h4 {
     margin-bottom: 15px;
