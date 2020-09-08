@@ -6,6 +6,7 @@ import ReviewCard from "./ReviewCard";
 
 import "swiper/swiper.scss";
 import "swiper/swiper-bundle.css";
+import { FormattedMessage } from "react-intl";
 
 SwiperCore.use([Autoplay]);
 
@@ -14,15 +15,17 @@ const StyledSwiper = styled(Swiper)`
   /* bottom: 300px; */
   /* left: 0%; */
 
+  width: 50%;
+
   @media all and (max-width: 1023px) {
-    /* bottom: 200px; */
+    width: 80%;
   }
 `;
 
 const SlideItemStyle = {
   // backgroundColor: "crimson",
   // border: "2px solid black",
-  width: "90vw",
+  width: "100%",
   display: "flex",
 };
 
@@ -45,35 +48,39 @@ function Slider({ isMobile }) {
     >
       <SwiperSlide style={SlideItemStyle}>
         <ReviewCard
-          name={"John Doe"}
-          image={""}
-          reivew={"askdfha;ksdgf;dsbfkj;agsd;jifkbsadkj;fgahjsdgflhsdfj"}
-        />
-      </SwiperSlide>
-      <SwiperSlide style={SlideItemStyle}>
-        <ReviewCard
-          name={"John Doe"}
+          name={"Jessica Lang"}
           image={""}
           reivew={
-            "It defines whether the flex items are forced in a single line or can be flowed into multiple lines. If set to multiple lines, "
+            <FormattedMessage id="Great and fun experience! I really enjoyed using it! It really helps me improve Korean language." />
           }
         />
       </SwiperSlide>
       <SwiperSlide style={SlideItemStyle}>
-        <ReviewCard />
-      </SwiperSlide>
-      <SwiperSlide style={SlideItemStyle}>
-        <ReviewCard />
-      </SwiperSlide>
-      <SwiperSlide style={SlideItemStyle}>
         <ReviewCard
-          name={"John Doe"}
+          name={"Noah Woods"}
           image={""}
-          reivew={"askdfha;ksdgf;dsbfkj;agsd;jifkbsadkj;fgahjsdgflhsdfj"}
+          reivew={
+            <FormattedMessage id="I studied Korean language for several years and popkorn turned out to be the best. I will definitely recommand" />
+          }
         />
       </SwiperSlide>
       <SwiperSlide style={SlideItemStyle}>
-        <ReviewCard />
+        <ReviewCard
+          name={"Đào  hiên"}
+          image={""}
+          reivew={
+            <FormattedMessage id="Easy way to learn Korean language. I found Korean to be really challenging but Popkorn changed my mind! I use popkorn to have fun, not to study" />
+          }
+        />
+      </SwiperSlide>
+      <SwiperSlide style={SlideItemStyle}>
+        <ReviewCard
+          name={"Quỳnh Như"}
+          image={""}
+          reivew={
+            <FormattedMessage id="I love Kpop and I love Kdramas. Now I love Popkorn too! I think I will continue using this application." />
+          }
+        />
       </SwiperSlide>
     </StyledSwiper>
   );

@@ -4,19 +4,15 @@ import search from "../../../assets/search.svg";
 import watch from "../../../assets/watch.svg";
 import learn from "../../../assets/learn.svg";
 import improve from "../../../assets/improve.svg";
+import { FormattedMessage } from "react-intl";
 
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty("--vh", `${vh}px`);
 
 const OuterWrapper = styled.div`
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
-  padding: 3em 0;
+  padding: 15em 0 0 0;
 
   background-color: #f6f9fc;
 
@@ -191,9 +187,11 @@ function FourthBlock() {
   return (
     <OuterWrapper id={"features"}>
       <div className="textWrapper">
-        <div className="features">Features</div>
+        <div className="features">
+          <FormattedMessage id="Features" />
+        </div>
         <div className="desc">
-          EduPopKorn’s Mission expands beyond education.
+          <FormattedMessage id="EduPopKorn’s Mission expands beyond education." />
         </div>
       </div>
 
@@ -205,7 +203,10 @@ function FourthBlock() {
               <div className="chunktitle">Search</div>
             </div>
             <div className="chunkDesc">
-              Find your K-Pop Stars, <br /> favorite dramas and movies. <br />
+              <FormattedMessage id="Find your K-Pop Stars," />
+              <br />
+              <FormattedMessage id="favorite dramas and movies." />
+              <br />
             </div>
           </div>
         </Chunk>
@@ -216,8 +217,9 @@ function FourthBlock() {
               <div className="chunktitle">Watch</div>
             </div>
             <div className="chunkDesc">
-              Watch the videos with subtitles. <br /> Solve quick quizzes about
-              the video!
+              <FormattedMessage id="Watch the videos with subtitles." />
+              <br />
+              <FormattedMessage id="Solve quick quizzes about the video!" />
             </div>
           </div>
         </Chunk>
@@ -228,7 +230,7 @@ function FourthBlock() {
               <div className="chunktitle">Learn</div>
             </div>
             <div className="chunkDesc">
-              Fix your pronounciation with EdupopKorn TTS AI service.
+              <FormattedMessage id="Fix your pronounciation with EdupopKorn TTS AI service." />
             </div>
           </div>
         </Chunk>
@@ -239,7 +241,7 @@ function FourthBlock() {
               <div className="chunktitle">Improve</div>
             </div>
             <div className="chunkDesc">
-              Watch lectures provided by our selected educators.
+              <FormattedMessage id="Watch lectures provided by our selected educators." />
             </div>
           </div>
         </Chunk>

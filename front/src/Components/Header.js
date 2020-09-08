@@ -7,19 +7,29 @@ import { Menu, Dropdown } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import { Drawer } from "antd";
 
+const setKOLanguage = () => {
+  localStorage.setItem("lang", "ko");
+  window.location.reload();
+};
+const setENLanguage = () => {
+  localStorage.setItem("lang", "en");
+  window.location.reload();
+};
+const setVNLanguage = () => {
+  localStorage.setItem("lang", "vn");
+  window.location.reload();
+};
+
 const menu = (
   <Menu>
-    <Menu.Item>
+    <Menu.Item onClick={setENLanguage}>
       <div>Eng</div>
     </Menu.Item>
-    <Menu.Item>
+    <Menu.Item onClick={setVNLanguage}>
       <div>Tiếng Việt</div>
     </Menu.Item>
-    <Menu.Item>
+    <Menu.Item onClick={setKOLanguage}>
       <div>한국어</div>
-    </Menu.Item>
-    <Menu.Item>
-      <div>日本語</div>
     </Menu.Item>
   </Menu>
 );
@@ -162,10 +172,15 @@ class Header extends React.Component {
             <Link to="/" className="item">
               Home
             </Link>
-
-            <Link to="/faq" className="item">
+            {/* <Link to="/faq" className="item"> */}
+            <div
+              className="item"
+              style={{ display: "inline-block", cursor: "pointer" }}
+              onClick={() => alert("준비 중입니다")}
+            >
               FAQ
-            </Link>
+            </div>
+            {/* </Link> */}
             <Link to="/about" className="item">
               About Us
             </Link>
@@ -242,10 +257,9 @@ class Header extends React.Component {
             </Link>
           </div>
           <div className="LangButtonWrapper">
-            <LanguageButton>Kor</LanguageButton>
-            <LanguageButton>Eng</LanguageButton>
-            <LanguageButton>Việt</LanguageButton>
-            <LanguageButton>日本語</LanguageButton>
+            <LanguageButton onClick={setKOLanguage}>Kor</LanguageButton>
+            <LanguageButton onClick={setENLanguage}>Eng</LanguageButton>
+            <LanguageButton onClick={setVNLanguage}>Việt</LanguageButton>
           </div>
         </DrawerWrapper>
       </WholeWrapper>

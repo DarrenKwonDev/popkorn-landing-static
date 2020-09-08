@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 import { Title } from "../Style";
+import Others from "./Others";
 
 const Warapper = styled.div`
-  background-color: #f9fcff;
+  background-color: #f6f9fc;
   width: 100%;
   padding: 10em 8em;
   display: flex;
@@ -18,19 +19,34 @@ const Warapper = styled.div`
 
   .gridWrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     /* grid-template-rows: 1fr 1fr; */
     justify-items: center;
     align-items: center;
     gap: 8px;
 
-    width: 750px;
+    width: 1050px;
 
     @media all and (max-width: 768px) {
       grid-template-columns: 1fr;
       width: 300px;
       /* grid-template-rows: repeat(4, 1fr); */
     }
+  }
+
+  .customCard:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 1) 100%
+    );
   }
 `;
 
@@ -40,37 +56,29 @@ const CustomCard = styled.div`
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  cursor: pointer;
-
-  &:hover {
-    .hoverContents {
-      visibility: visible;
-      background-color: rgba(0, 0, 0, 0.2);
-    }
-    img {
-      filter: blur(4px);
-    }
-  }
+  z-index: 2;
 
   img {
     width: 100%;
-    height: 100%;
+    height: 500px;
     object-fit: cover;
     object-position: center center;
+
+    @media all and (max-width: 1023px) {
+      height: 100%;
+    }
   }
 
   .hoverContents {
-    border-radius: 6px;
-    padding: 6px;
-    width: 100%;
+    width: 80%;
     height: 100%;
 
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 12px;
 
     position: absolute;
-    visibility: hidden;
     z-index: 5;
     color: white;
     font-size: 1.25rem;
@@ -90,6 +98,7 @@ const CustomCard = styled.div`
       ul {
         list-style-type: circle;
         line-height: 1.5;
+        color: #ffffff8c;
       }
     }
 
@@ -101,44 +110,59 @@ const CustomCard = styled.div`
 
 function ThirdBlock() {
   return (
-    <Warapper>
-      <Title>Meet The Team</Title>
-      <div className="gridWrapper">
-        <CustomCard>
-          <div>
-            <img alt="example" src={"jb.png"} />
+    <>
+      <Warapper>
+        <Title>Meet The Team</Title>
+        <div className="gridWrapper">
+          <CustomCard className="customCard">
+            <div>
+              <img alt="example" src={"jb.png"} />
+              <div className="hoverContents">
+                <div className="text">
+                  <div className="name">JB</div>
+                  <ul>
+                    <li>
+                      Carnegie Mellon University, <br /> College of Engineering
+                    </li>
+                    <li>
+                      Sinchang Industrial Co., <br /> Ltd. advisory committee
+                    </li>
+                    <li>Pittsburgh Korean Language and culture operator</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </CustomCard>
+          <CustomCard className="customCard">
+            <img alt="example" src={"sh.jpg"} />
             <div className="hoverContents">
               <div className="text">
-                <div className="name">JB</div>
+                <div className="name">Suhun Kwon</div>
                 <ul>
                   <li>
-                    Carnegie Mellon University, <br /> College of Engineering
+                    Seoul National University, <br /> Korean language and
+                    literature
                   </li>
-                  <li>
-                    Sinchang Industrial Co., <br /> Ltd. advisory committee
-                  </li>
-                  <li>Pittsburgh Korean Language and culture operator</li>
                 </ul>
               </div>
             </div>
-          </div>
-        </CustomCard>
-        <CustomCard>
-          <img alt="example" src={"sh.png"} />
-          <div className="hoverContents">
-            <div className="text">
-              <div className="name">SH</div>
-              <ul>
-                <li>
-                  Seoul National University, <br /> Korean language and
-                  literature
-                </li>
-              </ul>
+          </CustomCard>
+          <CustomCard className="customCard">
+            <img alt="example" src={"clint.png"} />
+            <div className="hoverContents">
+              <div className="text">
+                <div className="name">Clint Minseung Yoo</div>
+                <ul>
+                  <li>Yale University</li>
+                  <li>Greenberg Traurig LLP</li>
+                  <li>Korea Men's National Lacrosse Team</li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </CustomCard>
-      </div>
-    </Warapper>
+          </CustomCard>
+        </div>
+      </Warapper>
+    </>
   );
 }
 

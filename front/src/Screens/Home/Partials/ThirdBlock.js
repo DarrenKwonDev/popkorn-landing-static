@@ -1,5 +1,6 @@
 import React from "react";
 import { ThirdblockStyle } from "../Style";
+import { FormattedMessage } from "react-intl";
 
 function ThirdBlock() {
   return (
@@ -9,7 +10,9 @@ function ThirdBlock() {
         <div>
           <div className="textWrapper">
             <div className="title">
-              Here's how PopKorn makes <br /> learning interesting
+              <FormattedMessage id="Here's how PopKorn makes" />
+              <br />
+              <FormattedMessage id="learning interesting" />
             </div>
           </div>
         </div>

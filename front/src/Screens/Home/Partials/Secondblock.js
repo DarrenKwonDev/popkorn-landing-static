@@ -1,5 +1,6 @@
 import React from "react";
 import { SecondblockStyle } from "../Style";
+import { FormattedMessage } from "react-intl";
 
 function Secondblock() {
   return (
@@ -10,18 +11,23 @@ function Secondblock() {
 
       <div className="descWrapper">
         <div className="desc1">
-          Get into <strong>popkorn</strong> <br />
-          and change your kpop stars into your personal teachers.
+          <FormattedMessage id="Get into popkorn" />
+          <br />
+          <FormattedMessage id="and change your kpop stars" />
+          <br />
+          <FormattedMessage id="into your personal teachers." />
         </div>
         <div className="desc2">
-          Know your favorite song or drama by heart.
+          <FormattedMessage id="Know your favorite song or drama by heart." />
           <br />
-          Master your Korean.
+          <FormattedMessage id="Master your Korean." />
         </div>
 
         <a href={"https://edupopkorn.com"}>
           <div className="discover">
-            <span>Discover</span>
+            <span>
+              <FormattedMessage id="Discover" />
+            </span>
           </div>
         </a>
       </div>

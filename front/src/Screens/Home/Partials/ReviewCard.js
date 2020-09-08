@@ -1,6 +1,7 @@
 import React from "react";
 import { Avatar } from "antd";
 import styled from "styled-components";
+import { UserOutlined } from "@ant-design/icons";
 
 const ReviewCardWrapper = styled.div`
   padding: 1em;
@@ -43,7 +44,11 @@ function ReviewCard({ name, image, reivew }) {
   return (
     <ReviewCardWrapper>
       <div className="upper">
-        <Avatar className="avatar" src={image ? image : ""} />
+        <Avatar
+          className="avatar"
+          src={image ? image : ""}
+          icon={<UserOutlined />}
+        />
         <div className="nickname">{name ? name : ""}</div>
       </div>
       <div className="stars">

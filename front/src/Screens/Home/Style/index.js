@@ -162,7 +162,8 @@ export const SecondblockStyle = styled.div`
   background-position: center;
   background-size: cover;
 
-  @media all and (max-width: 1023px) {
+  /* 태블릿을 위해 1025로 */
+  @media all and (max-width: 1025px) {
     flex-direction: column;
     justify-content: center;
     padding: 0;
@@ -174,16 +175,17 @@ export const SecondblockStyle = styled.div`
     flex-direction: column;
     align-items: center;
 
-    @media all and (max-width: 1023px) {
+    /* 태블릿을 위해 1025로 */
+    @media all and (max-width: 1025px) {
       flex-direction: column;
       align-items: center;
     }
 
     .mainImg {
       position: relative;
-      width: calc(100vw / 2.1);
+      width: calc(100vw / 2.3);
 
-      @media all and (max-width: 1023px) {
+      @media all and (max-width: 1025px) {
         width: 80vw;
       }
     }
@@ -194,18 +196,24 @@ export const SecondblockStyle = styled.div`
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+    width: 100%;
+    height: 100%;
 
-    @media all and (max-width: 1023px) {
+    /* 태블릿을 위해 1025로 */
+    @media all and (max-width: 1025px) {
       align-items: center;
+      height: 50%;
     }
 
     .desc1 {
       text-align: right;
-      font-size: 32px;
+      /* font-size: 32px; */
+      font-size: 2em;
       line-height: 1.5;
       margin-bottom: 16px;
 
-      @media all and (max-width: 1023px) {
+      /* 태블릿을 위해 1025로 */
+      @media all and (max-width: 1025px) {
         font-size: 1.25rem;
         text-align: center;
       }
@@ -217,7 +225,8 @@ export const SecondblockStyle = styled.div`
       line-height: 1.5;
       margin-bottom: 36px;
 
-      @media all and (max-width: 1023px) {
+      /* 태블릿을 위해 1025로 */
+      @media all and (max-width: 1025px) {
         font-size: 1rem;
         text-align: center;
       }
@@ -268,9 +277,13 @@ export const ThirdblockStyle = styled.div`
     margin-top: 16px;
     position: relative;
     overflow: hidden;
-    width: 90%;
+    width: 55%;
     border-radius: 12px;
     height: calc(100vh - 400px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .embed-container iframe,

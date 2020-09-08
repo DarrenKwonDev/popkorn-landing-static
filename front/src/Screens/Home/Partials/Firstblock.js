@@ -2,6 +2,7 @@ import React from "react";
 
 import Arrow from "./Arrow";
 import { FirstBlockStyled, DownloadButton } from "../Style";
+import { FormattedMessage } from "react-intl";
 
 function Firstblock() {
   return (
@@ -10,11 +11,11 @@ function Firstblock() {
         <img src={"man.png"} alt="man" className="manImage" />
         <div className="headTitleWrapper">
           <div className="title">
-            PopKorn makes
+            <FormattedMessage id="PopKorn makes" />
             <br />
-            Korean language
+            <FormattedMessage id="Korean language" />
             <br />
-            Fun and Addictive.
+            <FormattedMessage id="Fun and Addictive." />
           </div>
           <div className="ButtonWrapper">
             <DownloadButton

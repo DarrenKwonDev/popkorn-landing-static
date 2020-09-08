@@ -2,8 +2,36 @@ import styled from "styled-components";
 
 export const FirstBlockStyled = styled.div`
   position: relative;
-  width: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
   padding-top: 75px;
+  height: 65vh;
+
+  background-position: left left;
+  background-size: cover;
+  background-image: linear-gradient(
+      56deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("about.jpg");
+
+  .catchphrase {
+    position: absolute;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+
+    line-height: 1.5;
+
+    @media all and (max-width: 768px) {
+      font-size: 24px;
+    }
+  }
 
   .imageWrapper {
     display: flex;
@@ -12,10 +40,11 @@ export const FirstBlockStyled = styled.div`
     width: 100%;
     text-align: center;
 
-    .mainImg {
-      width: 800px;
+    /* .mainImg {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      object-position: center;
+      object-position: left center;
 
       @media all and (max-width: 1023px) {
         width: 650px;
@@ -24,24 +53,7 @@ export const FirstBlockStyled = styled.div`
       @media all and (max-width: 768px) {
         width: 450px;
       }
-    }
-
-    .catchphrase {
-      position: absolute;
-      font-size: 40px;
-      color: black;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-
-      line-height: 1.5;
-
-      @media all and (max-width: 768px) {
-        font-size: 24px;
-      }
-    }
+    } */
   }
 `;
 

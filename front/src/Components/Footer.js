@@ -14,6 +14,7 @@ const FooterWrapper = styled.div`
   width: 100%;
   padding: 2em 5em;
   color: #6b7684;
+  padding-top: 300px;
 
   line-height: 1.5;
 
@@ -24,7 +25,7 @@ const FooterWrapper = styled.div`
 
   @media all and (max-width: 1023px) {
     font-size: 1rem;
-    padding: 2em;
+    padding: 300px 2em 2em 2em;
 
     grid-template-columns: 1.5fr 1fr;
     grid-template-rows: 1fr 0.5fr 0.5fr;
