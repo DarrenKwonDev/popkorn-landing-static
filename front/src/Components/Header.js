@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect, useRef } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo_red from "../assets/logo_red.svg";
@@ -239,13 +239,15 @@ class Header extends React.Component {
             </Link>
           </div>
           <div>
-            <Link
+            {/* <Link
               to="/faq"
               className="drawerItems"
               onClick={this.onCloseDrawer}
-            >
+            > */}
+            <div onClick={() => alert("준비 중입니다")} className="drawerItems">
               FAQ
-            </Link>
+            </div>
+            {/* </Link> */}
           </div>
           <div>
             <Link

@@ -20,25 +20,27 @@ export default {
   "Watch the videos with subtitles.": "Watch the videos with subtitles.",
   "Solve quick quizzes about the video!":
     "Solve quick quizzes about the video!",
-  "Fix your pronounciation with EdupopKorn TTS AI service.":
-    "Fix your pronounciation with EdupopKorn TTS AI service.",
-  "Watch lectures provided by our selected educators.":
-    "Watch lectures provided by our selected educators.",
+
+  "Fix your pronounciation": "Fix your pronounciation",
+  "with EdupopKorn TTS AI service.": "with EdupopKorn TTS AI service.",
+
+  "Watch lectures provided by": "Watch lectures provided by",
+  "our selected educators.": "our selected educators.",
   //   후기
   Testimonials: "Testimonials",
   "Great and fun experience! I really enjoyed using it! It really helps me improve Korean language.":
     "Great and fun experience! I really enjoyed using it! It really helps me improve Korean language.",
   "I studied Korean language for several years and popkorn turned out to be the best. I will definitely recommand":
     "I studied Korean language for several years and popkorn turned out to be the best. I will definitely recommand",
-  "Easy way to learn Korean language. I found Korean to be really challenging but Popkorn changed my mind! I use popkorn to have fun, not to study":
-    "Easy way to learn Korean language. I found Korean to be really challenging but Popkorn changed my mind! I use popkorn to have fun, not to study",
+  "Easy way to learn Korean language. I found Korean to be really challenging but Popkorn changed my mind!":
+    "Easy way to learn Korean language. I found Korean to be really challenging but Popkorn changed my mind!",
   "I love Kpop and I love Kdramas. Now I love Popkorn too! I think I will continue using this application.":
     "I love Kpop and I love Kdramas. Now I love Popkorn too! I think I will continue using this application.",
 
   //   about
   "EduPopKorn is on a mission": "EduPopKorn is on a mission",
-  "to make Korean language fun and exciting.":
-    "to make Korean language fun and exciting.",
+  "to make Korean language": "to make Korean language",
+  "fun and exciting": "fun and exciting",
 
   "EduPopKorn is the world’s first Korean language learning platform that combines short clips and videos to education.":
     "EduPopKorn is the world’s first Korean language learning platform that combines short clips and videos to education.",

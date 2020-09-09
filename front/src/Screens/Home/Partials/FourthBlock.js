@@ -159,30 +159,30 @@ function FourthBlock() {
   const learnChunk = useRef("learn");
   const improveChunk = useRef("improve");
 
-  const options = {
-    threshold: "0.5",
-  };
+  // const options = {
+  //   threshold: "0.5",
+  // };
 
-  const callback = (entries, observer) => {
-    entries.forEach((entry) => {
-      // console.log(entry);
-      // console.log(entry.length);
-      // if (entry.isIntersecting) {
-      //   console.log("화면에서 노출됨");
-      // } else {
-      //   console.log("화면에서 제외됨");
-      // }
-    });
-  };
+  // const callback = (entries, observer) => {
+  //   entries.forEach((entry) => {
+  //     console.log(entry);
+  //     console.log(entry.length);
+  //     if (entry.isIntersecting) {
+  //       console.log("화면에서 노출됨");
+  //     } else {
+  //       console.log("화면에서 제외됨");
+  //     }
+  //   });
+  // };
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(callback, options);
-    observer.observe(searchChunk.current);
-    observer.observe(watchChunk.current);
-    observer.observe(learnChunk.current);
-    observer.observe(improveChunk.current);
-    return () => observer.disconnect();
-  }, []);
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(callback, options);
+  //   observer.observe(searchChunk.current);
+  //   observer.observe(watchChunk.current);
+  //   observer.observe(learnChunk.current);
+  //   observer.observe(improveChunk.current);
+  //   return () => observer.disconnect();
+  // }, []);
 
   return (
     <OuterWrapper id={"features"}>
@@ -230,7 +230,9 @@ function FourthBlock() {
               <div className="chunktitle">Learn</div>
             </div>
             <div className="chunkDesc">
-              <FormattedMessage id="Fix your pronounciation with EdupopKorn TTS AI service." />
+              <FormattedMessage id="Fix your pronounciation" />
+              <br />
+              <FormattedMessage id="with EdupopKorn TTS AI service." />
             </div>
           </div>
         </Chunk>
@@ -241,7 +243,9 @@ function FourthBlock() {
               <div className="chunktitle">Improve</div>
             </div>
             <div className="chunkDesc">
-              <FormattedMessage id="Watch lectures provided by our selected educators." />
+              <FormattedMessage id="Watch lectures provided by" />
+              <br />
+              <FormattedMessage id="our selected educators." />
             </div>
           </div>
         </Chunk>

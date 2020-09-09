@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import Others from "./Others";
 
 import { Title } from "../Style";
-import Others from "./Others";
 
 const Warapper = styled.div`
   background-color: #f6f9fc;
@@ -19,17 +19,17 @@ const Warapper = styled.div`
 
   .gridWrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    /* grid-template-rows: 1fr 1fr; */
+    grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
-    gap: 8px;
+    gap: 64px;
 
-    width: 1050px;
+    width: 750px;
 
-    @media all and (max-width: 768px) {
+    @media all and (max-width: 1023px) {
       grid-template-columns: 1fr;
       width: 300px;
+      gap: 16px;
       /* grid-template-rows: repeat(4, 1fr); */
     }
   }
@@ -65,7 +65,8 @@ const CustomCard = styled.div`
     object-position: center center;
 
     @media all and (max-width: 1023px) {
-      height: 100%;
+      height: 300px;
+      width: 300px;
     }
   }
 
@@ -112,7 +113,7 @@ function ThirdBlock() {
   return (
     <>
       <Warapper>
-        <Title>Meet The Team</Title>
+        <Title style={{ marginTop: 155 }}>Meet The Team</Title>
         <div className="gridWrapper">
           <CustomCard className="customCard">
             <div>
@@ -147,20 +148,10 @@ function ThirdBlock() {
               </div>
             </div>
           </CustomCard>
-          <CustomCard className="customCard">
-            <img alt="example" src={"clint.png"} />
-            <div className="hoverContents">
-              <div className="text">
-                <div className="name">Clint Minseung Yoo</div>
-                <ul>
-                  <li>Yale University</li>
-                  <li>Greenberg Traurig LLP</li>
-                  <li>Korea Men's National Lacrosse Team</li>
-                </ul>
-              </div>
-            </div>
-          </CustomCard>
         </div>
+
+        {/* 다른 사람들 */}
+        <Others />
       </Warapper>
     </>
   );

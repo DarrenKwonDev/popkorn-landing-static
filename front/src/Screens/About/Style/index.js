@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty("--vh", `${vh}px`);
+
 export const FirstBlockStyled = styled.div`
   position: relative;
 
@@ -9,7 +12,7 @@ export const FirstBlockStyled = styled.div`
   width: 100%;
 
   padding-top: 75px;
-  height: 65vh;
+  height: calc(var(--vh, 1vh) * 50);
 
   background-position: left left;
   background-size: cover;
@@ -25,6 +28,7 @@ export const FirstBlockStyled = styled.div`
     font-size: 40px;
     color: white;
     text-align: center;
+    padding: 1em;
 
     line-height: 1.5;
 

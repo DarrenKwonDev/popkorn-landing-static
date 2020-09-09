@@ -37,11 +37,12 @@ function Slider({ isMobile }) {
         disableOnInteraction: false,
       }}
       loop
+      allowTouchMove={false}
       direction={"vertical"}
       // 슬라이더 사이의 간격
       spaceBetween={5}
       // 슬라이드 몇 개씩 보여줄거야?
-      slidesPerView={3}
+      slidesPerView={isMobile ? 3 : 4}
       // 슬라이드가 몇 개씩 넘어갈 거야?
       slidesPerGroup={1}
       // autoHeight={true}
@@ -69,7 +70,7 @@ function Slider({ isMobile }) {
           name={"Đào  hiên"}
           image={""}
           reivew={
-            <FormattedMessage id="Easy way to learn Korean language. I found Korean to be really challenging but Popkorn changed my mind! I use popkorn to have fun, not to study" />
+            <FormattedMessage id="Easy way to learn Korean language. I found Korean to be really challenging but Popkorn changed my mind!" />
           }
         />
       </SwiperSlide>

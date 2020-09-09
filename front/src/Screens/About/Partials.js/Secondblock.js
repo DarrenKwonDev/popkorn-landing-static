@@ -11,7 +11,7 @@ const Warapper = styled.div`
   flex-direction: column;
 
   @media all and (max-width: 1023px) {
-    padding: 10em 2em;
+    padding: 10em 2.25em;
   }
 
   .desc {
@@ -21,6 +21,7 @@ const Warapper = styled.div`
     text-align: center;
 
     @media all and (max-width: 1023px) {
+      font-size: 18px;
       font-weight: 500;
       line-height: 1.5;
     }
@@ -52,7 +53,7 @@ function Secondblock() {
           <br />
           <br />
           <FormattedMessage id="Advocated and fascinated by the global K-pop enthusiasm," />
-
+          <br />
           <br />
           <FormattedMessage
             id="we were obliged to build the PopKorn platform that can help

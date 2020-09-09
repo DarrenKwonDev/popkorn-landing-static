@@ -37,6 +37,9 @@ const ReviewCardWrapper = styled.div`
     white-space: pre-wrap;
     word-break: break-all;
     font-size: 1.25rem;
+    @media all and (max-width: 1023px) {
+      font-size: 1rem;
+    }
   }
 `;
 

@@ -9,7 +9,9 @@ function FirstBlock() {
         <div>
           <FormattedMessage id="EduPopKorn is on a mission" />
           <br />
-          <FormattedMessage id="to make Korean language fun and exciting." />
+          <FormattedMessage id="to make Korean language" />
+          <br />
+          <FormattedMessage id="fun and exciting" />
         </div>
       </div>
     </FirstBlockStyled>

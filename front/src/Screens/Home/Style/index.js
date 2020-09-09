@@ -76,7 +76,7 @@ export const FirstBlockStyled = styled.div`
       }
       /* ipad에서 폰트가 너무 작에 되어서 max-width를 768에서 1px 뺌 */
       @media all and (max-width: 767px) {
-        font-size: 2rem;
+        font-size: 1.85rem;
       }
     }
 
@@ -110,7 +110,7 @@ export const FirstBlockStyled = styled.div`
 `;
 
 export const DownloadButton = styled.div`
-  width: 90%;
+  width: 300px;
   padding: 1.2em 2.4em;
   border-radius: 6px;
   text-align: center;
@@ -284,6 +284,10 @@ export const ThirdblockStyle = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media all and (max-width: 1023px) {
+      width: 85%;
+    }
   }
 
   .embed-container iframe,
