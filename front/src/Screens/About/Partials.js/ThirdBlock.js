@@ -94,6 +94,7 @@ const CustomCard = styled.div`
       .name {
         font-size: 24px;
         margin-bottom: 4px;
+        color: white;
       }
 
       ul {
@@ -117,7 +118,7 @@ function ThirdBlock() {
         <div className="gridWrapper">
           <CustomCard className="customCard">
             <div>
-              <img alt="example" src={"jb.png"} />
+              <img alt="example" src={"jb.jpg"} />
               <div className="hoverContents">
                 <div className="text">
                   <div className="name">JB</div>
