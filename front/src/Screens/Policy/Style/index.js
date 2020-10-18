@@ -1,10 +1,19 @@
 import styled from "styled-components";
 
+export const DownloadButton = styled.button`
+  padding: 1rem;
+  background-color: rgb(231, 40, 106);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+`;
+
 export const Wrapper = styled.div`
   min-height: 80vh;
   padding: 2em 5em;
   padding-top: 75px;
-
+  background-color: rgb(246, 249, 252);
   h1 {
     font-size: 2rem;
     font-weight: 600;
@@ -22,10 +31,16 @@ export const Wrapper = styled.div`
     font-weight: 600;
     margin: 1.25rem 0;
   }
+  h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 1.1rem 0;
+  }
 
   p {
     font-size: 1rem;
-    margin: 0.5rem 0;
+    line-height: 1.5rem;
+    margin: 0.85rem 0;
   }
 
   ul {

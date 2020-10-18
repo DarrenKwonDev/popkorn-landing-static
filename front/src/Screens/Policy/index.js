@@ -1,11 +1,16 @@
 import React from "react";
-import { Wrapper } from "./Style";
+import { Wrapper, DownloadButton } from "./Style";
 
 function Policy() {
   return (
     <>
       <Wrapper>
         <h1>Privacy Policy</h1>
+        <DownloadButton>
+          <a href="./privacy policy.pdf" download>
+            Download
+          </a>
+        </DownloadButton>
         <br />
         <br />
         <p>
@@ -16,29 +21,25 @@ function Policy() {
           applications of the Company which exist in the websites or platforms
           of other company.
         </p>
-        <br />
         <p>
           The Company is the controller of the information provided or collected
           in the websites on which this Policy is posted and in the course of
           using the applications of the Company which exist in the websites or
           platforms of other company.
         </p>
-        <br />
         <p>
           Through this Policy, the Company regards personal information of the
           users as important and inform them of the purpose and method of
           Company's using the personal information provided by the users and the
           measures taken by the Company for protection of those personal
-          information.{" "}
+          information.
         </p>
-        <br />
         <p>
           This Policy will be effective on the 20th day of October, 20 and, in
           case of modification thereof, the Company will make public notice of
           it through posting it on the bulletin board of Company's website or
           individual notice through sending mails, fax or e-mails)
         </p>
-        <br />
         <h2>1. Information to be collected and method of collection</h2>
         <h3>(1) Personal information items to be collected</h3>
         <p>
@@ -523,6 +524,514 @@ function Policy() {
           company constructs the following security measures to protect the users' personal information 
           from any unauthorized access, release, use or modification 
         </p>
+        <ul>
+          <li>
+            Encryption of personal information
+            <ul>
+              <li>
+                Transmit users' personal information by using encrypted
+                communication zone
+              </li>
+              <li>
+                Store important information such as passwords after encrypting
+                it
+              </li>
+            </ul>
+          </li>
+          <li>
+            Countermeasures against hacking
+            <ul>
+              <li>
+                Install a system in the zone the external access to which is
+                controlled so as to prevent leakage or damage of users' personal
+                information by hacking or computer virus
+              </li>
+            </ul>
+          </li>
+          <li>Establish and execute internal management plan</li>
+          <li>Install and operate access control system</li>
+          <li>
+            Take measures to prevent forging or alteration of access record
+          </li>
+        </ul>
+        <h2>7. Protection of personal information of children</h2>
+        <p>
+          In principle, the Company does not collect any information from the
+          children under 13 or equivalent minimum age as prescribed in the laws
+          in relevant jurisdiction. The website, products and services of the
+          Company are the ones to be provided to ordinary people, in principle.
+          The website or application of the Company has function to do age limit
+          so that children cannot use it and the Company does not intentionally
+          collect any personal information from children through that function.{" "}
+        </p>
+        <p>
+          (Additional procedure for collecting personal information from
+          children) However, if the Company collects any personal information
+          from children under 13 or equivalent minimum age as prescribed in the
+          laws in relevant jurisdiction for the services for unavoidable reason,
+          the Company will go through the additional procedure of the followings
+          for protecting that personal information of children:
+        </p>
+        <ul>
+          <li>
+            verify, to the extent that efforts are reasonably made, whether they
+            are children of the age at which consent from their guardian is
+            required and the consenting person is an authorized one.
+          </li>
+          <li>
+            obtain consent from the parents or guardian of children so as to
+            collect personal information of children or directly send the
+            information of products and services of the Company{" "}
+          </li>
+          <li>
+            {" "}
+            give the parents or guardian of children a notice of Company's
+            policy of privacy protection for children including the items,
+            purpose and sharing of personal information collected{" "}
+          </li>
+          <li>
+            {" "}
+            grant to legal representatives of children a right to access to
+            personal information of that children/correction or deletion of
+            personal information/temporary suspension of treatment of personal
+            information/ and request for withdrawal of their consent provided
+            before{" "}
+          </li>
+          <li>
+            limit the amount of personal information exceeding those necessary
+            for participation in online activities
+          </li>
+        </ul>
+        <h2>8. Modification of Privacy Protection Policy</h2>
+        <p>
+          The Company has the right to amend or modify this Policy from time to
+          time and, in such case, the Company will make a public notice of it
+          through bulletin board of its website (or through individual notice
+          such as written document, fax or e-mail) and obtain consent from the
+          users if required by relevant laws.
+        </p>
+        <h2>9. Youtube Privacyt Policyt and Terms</h2>
+        <p>
+          The  Company  uses  Yotube  API  service  to  provide  Youtube  video 
+          contents.  Regarding    the 
+          contents, we strictly follow the policies stated by Youtube. The link below states how Youtube 
+          protects users' privacy
+          - Youtube Privacy Policy terms and conditions: https://www.youtube.com/t/terms
+        </p>
+        <h2>10. Others</h2>
+        <p>
+          [Option to select 'data transfer to other countries ' in Appendix
+          &lt;1&gt; of Personal Privacy Policy]{" "}
+        </p>
+        <p>
+          [Option to select 'sites and service of 3rd party' in Appendix
+          &lt;2&gt; of Personal Privacy Policy]{" "}
+        </p>
+        <p>
+          [Option to select 'guidelines for residents in California' in Appendix
+          &lt;3&gt; of Personal Privacy Policy]{" "}
+        </p>
+        <p>
+          [Option to select 'guidelines for residents in Korea' in Appendix
+          &lt;4&gt; of Personal Privacy Policy]{" "}
+        </p>
+        <h2>11. Contact information of Company</h2>
+        <p>
+          Please use one of the following methods to contact the Company should
+          you have any queries in respect to this policy or wish to update your
+          information:
+        </p>
+        <p>Company name : Edupopkorn Co. Ltd.</p>
+        <p>
+          Address : Edupopkorn, 750, Gukhoe-daero, Yeongdeungpo-gu, Seoul,
+          Republic of Korea
+        </p>
+        <p>Tel.: +822-784-9311</p>
+        <p>E-mail: edupopkorn@edupopkorn.com</p>
+        <p>The latest update date: 19, October, 2020. </p>
+
+        {/* Appendix  */}
+
+        <h2>Appendix of Privacy Protection Policy</h2>
+        <h3>&lt;1&gt; Data transfer to other countries</h3>
+        <p>
+          Considering it engages in global businesses, the Company may provide
+          the users' personal information to the companies located in other
+          countries for the purpose as expressly stated in this Policy. For the
+          places where the personal information is transmitted, retained or
+          processed, the Company takes reasonable measures for protecting those
+          personal information.{" "}
+        </p>
+        <p>
+          (If used in the US, additional security measures may be available) In
+          addition, when the personal information obtained from the European
+          Union or Switzerland is used or disclosed, the Company may have to
+          comply with the US-EU Privacy Shield and Swiss-US Privacy Shield, take
+          other measures or obtain consent from users so far as those complies
+          with the regulations of EU so as to use a standardized agreement
+          provision approved by executing organizations of EU or securing proper
+          safe measures.
+        </p>
+        <h3>&lt;2&gt; 3rd party's sites and services</h3>
+        <p>
+          The website, product or service of the Company may include the links
+          to the ones of a 3rd party and the privacy protection policy of the
+          site of 3rd party may be different. Thus, it is required for the users
+          to check additionally that policy of a 3rd party site linked to the
+          site of the Company.{" "}
+        </p>
+        <h3>&lt;3&gt; Guide for users residing in California</h3>
+        <p>
+          If the user resides in California, certain rights may be given. The
+          Company prepare preventive measures necessary for protecting personal
+          information of members so that the Company can comply with online
+          privacy protection laws of California.
+        </p>
+        <p>
+          In case of leakage of personal information, an user may request the
+          Company to check the leakage. In addition, all the users in the
+          website of the Company, can modify their information at any time by
+          using the menu for changing information by connecting their personal
+          account.{" "}
+        </p>
+        <p>
+          Moreover, the Company does not trace the visitors of its website nor
+          use any signals for 'tracing prevent'. The Company will not collect
+          and provide any personal identification information through ad
+          services without consent of users.
+        </p>
+        <h3>&lt;4&gt; Guide for users residing in Korea</h3>
+        <p>
+          The Company guides several additional matters to be disclosed as
+          required by the information network laws and personal information
+          protection laws in the Republic of Korea as follows:
+        </p>
+        <h4>(1) Information collected</h4>
+        <p>The items collected by the Company are as follows: </p>
+        <ul>
+          <li>required information</li>
+          <table>
+            <tr>
+              <th>Title of service </th>
+              <th>Items to be collected(examples) </th>
+            </tr>
+            <tr>
+              <th>Internet membership service </th>
+              <th>
+                <ul>
+                  <li>
+                    User names, Name, email address, ID, Passwords, telephone
+                    number, national information, encoded identification
+                    information (CI), identification information of overlapped
+                    membership (DI)
+                  </li>
+                  <li>
+                    For minors, information of legal representatives (name,
+                    birth date, CI and DI of legal representatives){" "}
+                  </li>
+                </ul>
+              </th>
+            </tr>
+            <tr>
+              <th>Online payment service </th>
+              <th>
+                <ul>
+                  <li>Name, address, telephone number, and email address </li>
+                  <li>
+                    For payment with credit card : name of card company, number
+                    and expiration of card{" "}
+                  </li>
+                  <li>
+                    For small sum payment charged on the mobile phone: mobile
+                    phone number, payment approval number
+                  </li>
+                  <li>
+                    For payment by remittance: name of bank, account number and
+                    password of account{" "}
+                  </li>
+                  <li>
+                    For deposit without a bankbook: name of remitter, contact
+                    information{" "}
+                  </li>
+                  <li>
+                    Delivery information including delivery address, name and
+                    contact information of recipient{" "}
+                  </li>
+                  <li>Information of bid, purchase and sales </li>
+                </ul>
+              </th>
+            </tr>
+            <tr>
+              <th>Social network service </th>
+              <th>
+                <ul>
+                  <li>
+                    Name, email address, ID, telephone number, address, national
+                    information, address list (acquaintance)
+                  </li>
+                  <li>
+                    Information of place of taking pictures and date of creation
+                    of files{" "}
+                  </li>
+                  <li>
+                    Information of service use of members such as the type of
+                    contents watched or used by members, frequencies and period
+                    of activities of members{" "}
+                  </li>
+                </ul>
+              </th>
+            </tr>
+            <tr>
+              <th colspan="2">
+                <p>
+                  In the course of using services, the information as described
+                  below may be created and collected:{" "}
+                  <ul>
+                    <li>
+                      Information of devices (equipment/device identifier,
+                      operation system, hardware version, equipment set-up and
+                      telephone number){" "}
+                    </li>
+                    <li>
+                      Log information (Log data, use time, search word input by
+                      users, internet protocol address, cookie and web beacon){" "}
+                    </li>
+                    <li>
+                      Location information (Information of device location
+                      including specific geographical location detected through
+                      GPS, Bluetooth or Wifi)
+                    </li>
+                    <li>Other created information </li>
+                  </ul>
+                </p>
+              </th>
+            </tr>
+            <tr>
+              <th>Online payment service </th>
+              <th>
+                <ul>
+                  <li>Name, address, telephone number, and email address </li>
+                  <li>
+                    For payment with credit card : name of card company, number
+                    and expiration of card{" "}
+                  </li>
+                  <li>
+                    For small sum payment charged on the mobile phone: mobile
+                    phone number, payment approval number{" "}
+                  </li>
+                  <li>
+                    For payment by remittance: name of bank, account number and
+                    password of account{" "}
+                  </li>
+                  <li>
+                    For deposit without a bankbook: name of remitter, contact
+                    information{" "}
+                  </li>
+                  <li>
+                    Delivery information including delivery address, name and
+                    contact information of recipient{" "}
+                  </li>
+                  <li>Information of bid, purchase and sales </li>
+                </ul>
+              </th>
+            </tr>
+            <tr>
+              <th>Social network service </th>
+              <th>
+                <ul>
+                  <li>
+                    Name, email address, ID, telephone number, address, national
+                    information, address list (acquaintance){" "}
+                  </li>
+                  <li>
+                    Information of place of taking pictures and date of creation
+                    of files{" "}
+                  </li>
+                  <li>
+                    Information of service use of members such as the type of
+                    contents watched or used by members, frequencies and period
+                    of activities of members{" "}
+                  </li>
+                </ul>
+              </th>
+            </tr>
+            <tr>
+              <th colspan="2">
+                <p>
+                  In the course of using services, the information as described
+                  below may be created and collected
+                </p>
+                <ul>
+                  <li>
+                    Information of devices (equipment/device identifier,
+                    operation system, hardware version, equipment set-up and
+                    telephone number)
+                  </li>
+                  <li>
+                    Log information (Log data, use time, search word input by
+                    users, internet protocol address, cookie and web beacon)
+                  </li>
+                  <li>
+                    Location information (Information of device location
+                    including specific geographical location detected through
+                    GPS, Bluetooth or Wifi)
+                  </li>
+                  <li>Other created information </li>
+                </ul>
+              </th>
+            </tr>
+          </table>
+        </ul>
+        <h4>(2) Period for retention and use of personal information</h4>
+        <p>
+          In principle, the Company destructs personal information of users
+          without delay when: the purpose of its collection and use has been
+          achieved; the legal or management needs are satisfied; or users
+          request: Provided that, if it is required to retain the information by
+          relevant laws and regulations, the Company will retain member
+          information for certain period as designated by relevant laws and
+          regulations. The information to be retained as required by relevant
+          laws and regulations are as follows:{" "}
+        </p>
+        <table>
+          <tr>
+            <th>
+              <ul>
+                <li>
+                  Record regarding contract or withdrawal of subscription: 5
+                  years (The Act on Consumer Protection in Electronic Commerce ){" "}
+                </li>
+                <li>
+                  Record on payment and supply of goods:5 years (The Act on
+                  Consumer Protection in Electronic Commerce ){" "}
+                </li>
+                <li>
+                  Record on consumer complaint or dispute treatment: 3 years
+                  (The Act on Consumer Protection in Electronic Commerce )
+                </li>
+                <li>
+                  Record on collection/process, and use of credit information: 3
+                  years (The Act on Use and Protection of Credit Information )
+                </li>
+                <li>
+                  Record on sign/advertisement: 6 months(The Act on Consumer
+                  Protection in Electronic Commerce ){" "}
+                </li>
+                <li>
+                  Log record of users such as internet/data detecting the place
+                  of user connection: 3 months(The Protection of Communications
+                  Secrets Act ){" "}
+                </li>
+                <li>
+                  Other data for checking communication facts: 12 months (The
+                  Protection of Communications Secrets Act )
+                </li>
+              </ul>
+            </th>
+          </tr>
+        </table>
+        <h4>(3) Procedure and method of destruction of personal information</h4>
+        <p>
+          In principle, the Company destructs the information immediately after
+          the purposes of its collection and use have been achieved without
+          delay: Provided that, if any information is to be retained as required
+          by relevant laws and regulations, the Company retain it for the period
+          as required by those laws and regulations before destruction and, in
+          such event, the personal information which is stored and managed
+          separately will never be used for other purposes. The Company
+          destructs: hard copies of personal information by shredding with a
+          pulverizer or incinerating it; and delete personal information stored
+          in the form of electric file by using technological method making that
+          information not restored.{" "}
+        </p>
+        <h4>
+          (4) Technical, managerial and physical measures for protection of
+          personal information
+        </h4>
+        <p>
+          In order to prevent the loss, theft, leakage, alteration or damage of
+          personal information of the users, the Company takes technical,
+          managerial and physical measures for securing safety as follows:
+        </p>
+        <table>
+          <tr>
+            <th>Items </th>
+            <th>Examples </th>
+          </tr>
+          <tr>
+            <th>Technical measures </th>
+            <th>
+              <ul>
+                <li>
+                  Utilize security servers for transmitting encryption of
+                  personal information{" "}
+                </li>
+                <li>
+                  Take measures of encryption for confidential information
+                </li>
+                <li>
+                  Install and operate access control devices and equipments{" "}
+                </li>
+                <li>Establish and execute internal management plan </li>
+              </ul>
+            </th>
+          </tr>
+          <tr>
+            <th>Managerial measures </th>
+            <th>
+              <ul>
+                <li>
+                  Appoint a staff responsible for protecting personal
+                  information{" "}
+                </li>
+                <li>
+                  Provide education and training for staffs treating personal
+                  information{" "}
+                </li>
+                <li>Establish and execute internal management plan </li>
+                <li>
+                  Establish rules for writing passwords which is hard to be
+                  estimated{" "}
+                </li>
+                <li>
+                  Ensure safe storage of record of access to personal
+                  information processing system{" "}
+                </li>
+                <li>
+                  Classify the level of authority to access to personal
+                  information processing system{" "}
+                </li>
+              </ul>
+            </th>
+          </tr>
+          <tr>
+            <th>Physical measures </th>
+            <th>
+              <ul>
+                <li>
+                  Establish and operate the procedure for access control for the
+                  facilities for storing personal information{" "}
+                </li>
+                <li>
+                  Store documents and backing storage containing personal
+                  information in safe places which have locking device{" "}
+                </li>
+              </ul>
+            </th>
+          </tr>
+        </table>
+        <h4>(5) Staff responsible for managing personal information</h4>
+        <p>
+          The staff of the Company responsible for managing personal information
+          is as follows:{" "}
+        </p>
+        <ul>
+          <li> Name of staff responsible for managing personal information:</li>
+        </ul>
+        <p>Dept. : Edupopkorn (tech)</p>
+        <p>Tel. : +822-784-9311</p>
+        <p>Contact : edupopkorn@edupopkorn.com</p>
+        <p>The latest update date: 19, October, 2020. </p>
       </Wrapper>
     </>
   );
