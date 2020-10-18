@@ -44,7 +44,7 @@ const Warapper = styled.div`
     background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.2) 55%,
       rgba(0, 0, 0, 1) 100%
     );
   }
@@ -100,7 +100,7 @@ const CustomCard = styled.div`
       ul {
         list-style-type: circle;
         line-height: 1.5;
-        color: #ffffff8c;
+        color: rgba(255, 255, 255, 0.6);
       }
     }
 
@@ -121,13 +121,10 @@ function ThirdBlock() {
               <img alt="example" src={"jb.jpg"} />
               <div className="hoverContents">
                 <div className="text">
-                  <div className="name">JB</div>
+                  <div className="name">Joonbeom Cho</div>
                   <ul>
                     <li>
                       Carnegie Mellon University, <br /> College of Engineering
-                    </li>
-                    <li>
-                      Sinchang Industrial Co., <br /> Ltd. advisory committee
                     </li>
                     <li>Pittsburgh Korean Language and culture operator</li>
                   </ul>

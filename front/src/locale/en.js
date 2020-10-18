@@ -4,8 +4,8 @@ export default {
   "PopKorn makes": "PopKorn makes",
   "Korean language": "Korean language",
   "Fun and Addictive.": "Fun and Addictive.",
-  "Get into popkorn": "Get into popkorn",
-  "and change your kpop stars": "and change your kpop stars",
+  "Get into PopKorn": "Get into PopKorn",
+  "and change your K-pop stars": "and change your K-pop stars",
   "into your personal teachers.": "into your personal teachers.",
   "Know your favorite song or drama by heart.":
     "Know your favorite song or drama by heart.",

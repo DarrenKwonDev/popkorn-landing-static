@@ -35,7 +35,7 @@ function Firstblock() {
             </DownloadButton>
             <DownloadButton className="apple">
               <i className="fab fa-apple"></i>
-              App store
+              App Store
             </DownloadButton>
             <DownloadButton className="web">
               <i className="fas fa-globe-asia"></i>

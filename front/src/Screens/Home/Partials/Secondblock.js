@@ -11,9 +11,9 @@ function Secondblock() {
 
       <div className="descWrapper">
         <div className="desc1">
-          <FormattedMessage id="Get into popkorn" />
+          <FormattedMessage id="Get into PopKorn" />
           <br />
-          <FormattedMessage id="and change your kpop stars" />
+          <FormattedMessage id="and change your K-pop stars" />
           <br />
           <FormattedMessage id="into your personal teachers." />
         </div>

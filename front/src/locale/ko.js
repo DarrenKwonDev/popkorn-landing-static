@@ -4,8 +4,8 @@ export default {
   "Fun and Addictive.": "EduPopKorn",
   "Here's how PopKorn makes": "한국어 공부를 재미있게 만드는",
   "learning interesting": "팝콘을 소개합니다!",
-  "Get into popkorn": "팝콘에 참여하세요",
-  "and change your kpop stars": "당신의 Kpop 스타에게",
+  "Get into PopKorn": "팝콘에 참여하세요",
+  "and change your K-pop stars": "당신의 Kpop 스타에게",
   "into your personal teachers.": "직접 한국어 과외를 받아보세요",
   "Know your favorite song or drama by heart.":
     "좋아하는 노래와 드라마를 깊게 이해해보세요",

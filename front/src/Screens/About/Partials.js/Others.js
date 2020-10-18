@@ -41,27 +41,34 @@ const Wrapper = styled.div`
   }
 `;
 
+const DividerWrapper = styled.div`
+  width: 240px;
+  margin-top: 108px;
+  margin-bottom: 56px;
+`;
+
 function Others() {
   return (
     <>
-      <div style={{ width: "50vw", margin: "24px" }}>
+      <DividerWrapper>
         <Divider>
           <strong>Special Advisor</strong>
         </Divider>
-      </div>
+      </DividerWrapper>
       <Wrapper>
         <div className="advisorCard">
           <img src={"clint.png"} alt="clint" />
           <ul>
+            <li>Clint Minseung Yoo</li>
             <li>Yale University</li>
             <li>Greenberg Traurig LLP</li>
             <li>Korea Men's National Lacrosse Team</li>
           </ul>
         </div>
-
         <div className="advisorCard secondOne">
           <img src={"kang.jpg"} alt="kang" />
           <ul>
+            <li>Kyong Sik Kang</li>
             <li>George Washington University</li>
             <li>Korea Innovation Center (Operator) </li>
             <li>Born.D Enter (planner at Club Octagon)</li>

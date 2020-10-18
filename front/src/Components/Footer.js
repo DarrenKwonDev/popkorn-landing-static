@@ -112,8 +112,7 @@ function Footer() {
       <div className="termTab">
         <h4>Help</h4>
         <div>
-          <div>Privacy Policy</div>
-          <div>Terms</div>
+          <Link to="policy">Privacy Policy</Link>
         </div>
       </div>
       <div className="socialTab">
