@@ -4,7 +4,5 @@
   <img src="./front/public/logo_red.png" alt="logo" />
 </p>
 
-
-<https://corp.edupopkorn.com>
-
+## miscellaneous
 Served by AWS S3 Web Hosting + CloudFront  
