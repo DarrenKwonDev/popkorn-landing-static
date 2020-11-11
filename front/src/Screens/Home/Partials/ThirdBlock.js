@@ -18,7 +18,8 @@ function ThirdBlock() {
         </div>
         {/* 비디오 */}
         <div className="embed-container">
-          <iframe
+          <div>Video 준비중</div>
+          {/* <iframe
             src="https://player.vimeo.com/video/445441375"
             frameBorder="0"
             width="640"
@@ -29,7 +30,7 @@ function ThirdBlock() {
             // mozallowfullscreen
             className="video"
             title="vidoe-browser"
-          ></iframe>
+          ></iframe> */}
         </div>
       </ThirdblockStyle>
     </>

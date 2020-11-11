@@ -42,13 +42,13 @@ export default {
   "to make Korean language": "là mang đến một môi trường học tiếng ",
   "fun and exciting": "Hàn dễ dàng và thú vị.",
   "EduPopKorn is the world’s first Korean language learning platform that combines short clips and videos to education.":
-    "EduPopKorn은 클립 비디오와 교육을 결합한 최초의 온라인 한국어 교육 플랫폼입니다.",
+    "Edupopcorn là nền tảng giáo dục tiếng Hàn online đầu tiên kết hợp video clip với giáo dục.",
   "As one of the leaders of online language learning platform, we design education for entertainment.":
-    "우리는 단순한 주입식 교육이 아닌 놀이와 교육을 결합하고자 합니다.",
+    " Chúng tôi không chỉ là nơi giáo dục nhàm chán thông thường mà là nơi kết hợp học tập và vui chơi.",
   "A team of edutainment maniacs have gathered to revolutionalize language learning through mobile application and AI technology.":
-    "이러한 미션을 수행하기 위해 AI를 비롯한 ICT 기술을 통해 언어 교육을 혁신할 것입니다.",
+    "Để thực hiện nhiệm vụ này, chúng tôi sẽ cải tiến việc giáo dục ngôn ngữ thông qua kỹ thuật ICT và AI.",
   "Advocated and fascinated by the global K-pop enthusiasm,":
-    "또한, 최근 한국 문화에 대한 수요에 호응하고자",
+    "Ngoài ra, nhằm hưởng ứng nhu cầu đối với văn hòa Hàn Quốc dạo gần đây, chúng tôi mong muốn góp phần giúp những người quan tâm đến ",
   "we were obliged to build the PopKorn platform that can help world wide fans to enjoy Korean video contents by heart.":
-    "한국에 관심이 있는 전세계의 사람들이 한국어를 이해함으로써 한국의 문화 컨텐츠를 보다 깊게 이해할 수 있도록 기여하고자 합니다.",
+    "Hàn Quốc trên thế giới có thể hiểu sâu hơn về các nội dung văn hóa Hàn Quốc thông qua việc hiểu tiếng Hàn.",
 };

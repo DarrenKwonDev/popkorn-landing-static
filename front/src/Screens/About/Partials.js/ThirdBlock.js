@@ -139,8 +139,8 @@ function ThirdBlock() {
                 <div className="name">Suhun Kwon</div>
                 <ul>
                   <li>
-                    Seoul National University, <br /> Korean language and
-                    literature
+                    Seoul National University, <br /> Korean language,
+                    <br /> Entrepreneurship and Venture Management
                   </li>
                 </ul>
               </div>

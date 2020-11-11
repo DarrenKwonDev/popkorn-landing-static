@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import search from "../../../assets/search.svg";
 import watch from "../../../assets/watch.svg";

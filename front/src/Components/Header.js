@@ -16,7 +16,7 @@ const setENLanguage = () => {
   window.location.reload();
 };
 const setVNLanguage = () => {
-  localStorage.setItem("lang", "vn");
+  localStorage.setItem("lang", "vi");
   window.location.reload();
 };
 
